@@ -10,32 +10,68 @@
 # Font & Color Variables
 # Help: https://bootstrapmade.com/color-system/
 --------------------------------------------------------------*/
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
+
 /* Fonts */
 :root {
-  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Quicksand",  sans-serif;
-  --nav-font: "Raleway",  sans-serif;
+  --default-font: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --heading-font: "Merriweather", serif;
+  --nav-font: "Open Sans", sans-serif;
 }
 
-/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
+/* Global Colors */
 :root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #555555; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #333333; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #000000; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  --background-color: #FFF7EB;       /* soft off-white background */
+  --default-color: #3B2C25;          /* dark brown text for readability */
+  --heading-color: #2A1E17;          /* richer/darker brown for headings */
+  --accent-color: #78A3C5;           /* main blue accent (links/buttons) */
+  --surface-color: #FFECCF;          /* cream background for cards/sections */
+  --contrast-color: #FFF7EB;         /* cream/off-white text on dark bg */
 }
 
-/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
+/* Nav Menu Colors */
 :root {
-  --nav-color: #555555;  /* The default color of the main navmenu links */
-  --nav-hover-color: #000000; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #fafafa; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #8f8f8f; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #000000; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-color: #3B2C25;              /* dark brown for nav links */
+  --nav-hover-color: #78A3C5;        /* hover = blue accent */
+  --nav-mobile-background-color: #FFF7EB;
+  --nav-dropdown-background-color: #FFECCF;
+  --nav-dropdown-color: #3B2C25;     /* dropdown links in dark brown */
+  --nav-dropdown-hover-color: #78A3C5;
 }
+
+/* Apply Fonts + Colors */
+body {
+  font-family: var(--default-font);
+  background-color: var(--background-color);
+  color: var(--default-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  color: var(--heading-color);
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--heading-color);
+}
+
+nav, .navbar {
+  font-family: var(--nav-font);
+}
+
+/* Example dark section */
+.section-dark {
+  background-color: #78A3C5;   /* blue background */
+  color: var(--contrast-color); /* cream/off-white text */
+  padding: 2rem;
+}
+
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
