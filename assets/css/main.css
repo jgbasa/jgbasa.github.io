@@ -76,8 +76,8 @@ nav, .navbar {
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 .light-background {
-  --background-color: #fafafa;
-  --surface-color: #ffffff;
+  --background-color: #FFF7EB;
+  --surface-color: #FFECCF;
 }
 
 .dark-background {
