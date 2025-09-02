@@ -205,7 +205,7 @@ h6 {
 /* Global Header on Scroll
 ------------------------------*/
 .scrolled .header {
-  --background-color: rgba(16, 26, 32, 0.9);
+  --background-color: rgba(242, 204, 143, 0.7);
 }
 
 /*--------------------------------------------------------------
@@ -867,7 +867,7 @@ section,
 
 .hero .hero-image .floating-elements .floating-card {
   position: absolute;
-  background: var(--surface-color);
+  background: #81b29a;
   padding: 15px 20px;
   border-radius: 15px;
   box-shadow: 0 10px 30px color-mix(in srgb, var(--default-color), transparent 90%);
@@ -880,7 +880,7 @@ section,
 
 .hero .hero-image .floating-elements .floating-card i {
   font-size: 1.5rem;
-  color: var(--accent-color);
+  color: var(--background-color);
 }
 
 .hero .hero-image .floating-elements .floating-card.design {
