@@ -890,14 +890,14 @@ section,
 }
 
 .hero .hero-image .floating-elements .floating-card.code {
-  bottom: 30%;
+  bottom: 35%;
   left: -15%;
   animation-delay: 1s;
 }
 
 .hero .hero-image .floating-elements .floating-card.creativity {
-  top: 60%;
-  right: -5%;
+  top: 80%;
+  right: -4%;
   animation-delay: 2s;
 }
 
