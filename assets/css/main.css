@@ -927,6 +927,64 @@ section,
 }
 
 /*--------------------------------------------------------------
+# Timeline Section
+--------------------------------------------------------------*/
+.timeline-section {
+  position: relative;
+}
+.timeline {
+  position: relative;
+  margin-top: 50px;
+}
+.timeline-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: #dee2e6;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+.timeline-item {
+  position: relative;
+  flex: 1;
+  cursor: pointer;
+  z-index: 2;
+}
+.timeline-dot {
+  width: 20px;
+  height: 20px;
+  background: #0d6efd;
+  border-radius: 50%;
+  margin: 0 auto;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+.timeline-item:hover .timeline-dot {
+  transform: scale(1.3);
+  background: #0a58ca;
+}
+.timeline-label {
+  position: absolute;
+  width: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 500;
+  color: #333;
+  transition: color 0.2s ease;
+}
+.timeline-item:hover .timeline-label {
+  color: #0d6efd;
+}
+/* Alternate labels above and below */
+.timeline-item:nth-child(odd) .timeline-label {
+  top: -45px;
+}
+.timeline-item:nth-child(even) .timeline-label {
+  bottom: -45px;
+}
+
+/*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
 .about .intro-content .eyebrow {
