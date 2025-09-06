@@ -970,7 +970,7 @@ section,
 }
 .timeline-label {
   position: absolute;
-  width: 120px;
+  width: 180px;
   left: 50%;
   transform: translateX(-50%) scale(1); /* add scale(1) as default */
   font-weight: 500;
