@@ -201,4 +201,18 @@
     selector: '.glightbox'
   });
 
+  // Blog Carousel Functionality
+  const blogSlider = document.querySelector('.blog-slider');
+
+  function activateBlog(e) {
+    const items = document.querySelectorAll('.blog-item');
+    if (e.target.matches('.next')) {
+      blogSlider.append(items[0]);
+    } else if (e.target.matches('.prev')) {
+      blogSlider.prepend(items[items.length - 1]);
+    }
+  }
+
+  document.addEventListener('click', activateBlog, false);
+
 })();
