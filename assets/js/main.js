@@ -203,6 +203,7 @@
 
   // Blog Carousel Functionality
   const blogSlider = document.querySelector('.blog-slider');
+  const blogNav = document.querySelector('.blog-nav');
 
   function activateBlog(e) {
     const items = document.querySelectorAll('.blog-item');
@@ -213,6 +214,9 @@
     }
   }
 
-  document.addEventListener('click', activateBlog, false);
+  // Use the blogNav element to listen for clicks
+  if (blogNav) {
+    blogNav.addEventListener('click', activateBlog, false);
+  }
 
-})();
+})(); // This is the end of the existing file's IIFE
