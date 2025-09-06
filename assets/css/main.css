@@ -931,10 +931,12 @@ section,
 --------------------------------------------------------------*/
 .timeline-section {
   position: relative;
+  background-color: #3d405b;
 }
 .timeline {
   position: relative;
-  margin-bottom: 50px;
+  margin-top: 150px;
+  margin-bottom: 150px;
 }
 .timeline-line {
   position: absolute;
@@ -962,20 +964,25 @@ section,
 }
 .timeline-item:hover .timeline-dot {
   transform: scale(1.2);
-  background: var(--surface-color);
+  background: var(--accent-color);
+  box-shadow: 0 0 0 8px rgba(224, 122, 95, 0.4); /* outer circle */
+  transition: all 0.3s ease;
 }
 .timeline-label {
   position: absolute;
   width: 120px;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%) scale(1); /* add scale(1) as default */
   font-weight: 500;
-  color: var(--default-color);
-  transition: color 0.2s ease;
+  color: var(--surface-color);
+  transition: all 0.3s ease;
 }
+
 .timeline-item:hover .timeline-label {
   color: var(--surface-color);
+  transform: translateX(-50%) scale(1.2); /* keep translate + scale */
 }
+
 /* Alternate labels above and below */
 .timeline-item:nth-child(odd) .timeline-label {
   top: -45px;
