@@ -2958,159 +2958,75 @@ section,
 /*--------------------------------------------------------------
 # Blog Section
 --------------------------------------------------------------*/
-.blog-main {
-  position: relative;
-  width: 100%;
-  height: 60vh;
-  max-width: 960px;
-  margin: 0 auto;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.3);
-  overflow: hidden;
+/* Blog Section */
+#blog {
+  background-color: var(--background-color);
+  color: var(--default-color);
+}
+
+#blog h2 {
+  font-family: var(--heading-font);
+  color: var(--heading-color);
+  margin-bottom: 2rem;
+}
+
+/* Card Styling */
+#blog .card {
+  background-color: var(--surface-color);
+  border: none;
+  border-radius: 15px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#blog .card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Card Body & Text */
+#blog .card-body {
+  padding: 2rem;
+}
+
+#blog .card-body h3 {
+  font-family: var(--heading-font);
+  color: var(--heading-color);
+  margin-bottom: 1rem;
+}
+
+#blog .card-body p {
+  font-family: var(--default-font);
+  color: var(--default-color);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* Images */
+#blog img {
   border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
 
-.blog-slider {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
+/* Buttons */
+#blog .btn-primary {
+  background-color: var(--accent-color);
+  border: none;
+  font-family: var(--default-font);
+  font-weight: 600;
+  padding: 0.5rem 1.25rem;
 }
 
-.blog-item {
-  width: 200px;
-  height: 300px;
-  list-style-type: none;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 1;
-  background-position: center;
-  background-size: cover;
-  border-radius: 20px;
-  box-shadow: 0 20px 30px rgba(255,255,255,0.3) inset;
-  transition: transform 0.1s, left 0.75s, top 0.75s, width 0.75s, height 0.75s;
-  opacity: 1; /* Ensure all images start as visible */
+#blog .btn-primary:hover {
+  background-color: #5c4033; /* slightly lighter brown accent */
 }
 
-/* This is the key change: positioning and display */
-.blog-item:nth-child(1) {
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  transform: none;
-  border-radius: 0;
-  box-shadow: none;
-  opacity: 1;
-}
-
-.blog-item:nth-child(2) {
-  left: 50% !important;
-}
-
-.blog-item:nth-child(3) {
-  left: calc(50% + 220px) !important;
-}
-
-.blog-item:nth-child(4) {
-  left: calc(50% + 440px) !important;
-}
-
-.blog-item:nth-child(5) {
-  left: calc(50% + 660px) !important;
-}
-
-.blog-item:nth-child(6) {
-  left: calc(50% + 880px) !important;
-  opacity: 0 !important;
-}
-
-.blog-content {
-  width: min(30vw, 400px);
-  position: absolute;
-  top: 50%;
-  left: 3rem;
-  transform: translateY(-50%);
-  font: 400 0.85rem helvetica, sans-serif;
-  color: white;
-  text-shadow: 0 3px 8px rgba(0,0,0,0.5);
-  opacity: 0;
-  pointer-events: none;
-}
-
-.blog-item:nth-of-type(1) .blog-content {
-  opacity: 1;
-  pointer-events: auto;
-  animation: show 0.75s ease-in-out 0.3s forwards;
-}
-
-@keyframes show {
-  0% {
-    filter: blur(5px);
-    transform: translateY(calc(-50% + 75px));
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #blog .card-body {
+    text-align: center;
   }
-  100% {
-    opacity: 1;
-    filter: blur(0);
-  }
-}
 
-.blog-nav {
-  position: absolute;
-  bottom: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 5;
-  user-select: none;
-}
-
-.blog-nav .blog-btn {
-  background-color: rgba(255,255,255,0.5);
-  color: rgba(0,0,0,0.7);
-  border: 2px solid rgba(0,0,0,0.6);
-  margin: 0 0.25rem;
-  padding: 0.75rem;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.blog-nav .blog-btn:hover {
-  background-color: rgba(255,255,255,0.3);
-}
-
-/* Responsive Styles */
-@media (max-width: 900px) {
-  .blog-main {
-    height: 50vh;
-  }
-}
-
-@media (max-width: 650px) {
-  .blog-main {
-    height: 40vh;
-  }
-  .blog-content {
-    left: 1rem;
-    width: min(60vw, 300px);
-  }
-  .blog-item {
-    width: 130px;
-    height: 220px;
-  }
-  .blog-item:nth-child(2) {
-    left: 50% !important;
-  }
-  .blog-item:nth-child(3) {
-    left: calc(50% + 140px) !important;
-  }
-  .blog-item:nth-child(4) {
-    left: calc(50% + 280px) !important;
-  }
-  .blog-item:nth-child(5) {
-    left: calc(50% + 420px) !important;
-  }
-  .blog-item:nth-child(6) {
-    left: calc(50% + 560px) !important;
-    opacity: 0 !important;
+  #blog img {
+    margin-top: 1rem;
   }
 }
