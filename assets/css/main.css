@@ -3030,3 +3030,14 @@ section,
     margin-top: 1rem;
   }
 }
+
+.equation {
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 2rem 0;
+}
+.note {
+  text-align: center;
+  font-style: italic;
+  color: #3d405b;
+}
