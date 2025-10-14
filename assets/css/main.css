@@ -3041,3 +3041,10 @@ section,
   font-style: italic;
   color: #3d405b;
 }
+
+#works-cited p {
+  text-indent: -1.5em;
+  padding-left: 1.5em;
+  margin-bottom: 0.75rem;
+}
+
