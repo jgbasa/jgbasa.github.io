@@ -3044,3 +3044,119 @@ section,
   color: #3d405b;
 }
 
+/*--------------------------------------------------------------
+# Writing Samples Section
+--------------------------------------------------------------*/
+.writing-section .writing-card {
+  background-color: var(--surface-color);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  transition: all 0.3s ease;
+}
+
+.writing-section .writing-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.writing-section .writing-card .card-img-left {
+  flex: 0 0 180px;
+  max-width: 180px;
+  overflow: hidden;
+}
+
+.writing-section .writing-card .card-img-left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.writing-section .writing-card:hover .card-img-left img {
+  transform: scale(1.1);
+}
+
+.writing-section .writing-card .card-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.writing-section .writing-card .card-body h5 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--heading-color);
+  margin-bottom: 8px;
+}
+
+.writing-section .writing-card .card-body p {
+  font-size: 0.9rem;
+  color: var(--default-color);
+  margin-bottom: 10px;
+}
+
+.writing-section .writing-card .tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.writing-section .writing-card .tags .badge {
+  font-size: 0.8rem;
+  padding: 4px 12px;
+  border-radius: 20px;
+  background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+  color: var(--accent-color);
+  font-weight: 500;
+}
+
+.writing-section .writing-card .card-body .btn {
+  border-radius: 30px;
+  padding: 8px 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.writing-section .writing-card .btn-outline-primary {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.writing-section .writing-card .btn-outline-primary:hover {
+  background-color: var(--accent-color);
+  color: var(--contrast-color);
+}
+
+.writing-section .writing-card .btn-outline-success {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.writing-section .writing-card .btn-outline-success:hover {
+  background-color: var(--accent-color);
+  color: var(--contrast-color);
+}
+
+.writing-section .writing-card .btn i {
+  margin-right: 4px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .writing-section .writing-card {
+    flex-direction: column;
+  }
+
+  .writing-section .writing-card .card-img-left {
+    max-width: 100%;
+    flex: none;
+  }
+}
+
+
