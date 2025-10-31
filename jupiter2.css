@@ -21,23 +21,14 @@
   body {
     background-color: var(--bg-color);
     color: var(--text-color);
-    font-family: 'Lora', serif; /* Paragraph text */
+    font-family: "Inter", system-ui, sans-serif;
     transition: background 0.3s, color 0.3s;
-    line-height: 1.6;
-  }
-  
-  p, footer {
-    font-family: 'Lora', serif;
   }
   
   a { color: var(--link-color); }
   a:hover { text-decoration: underline; }
   
-  /* ---------- HEADERS ---------- */
-  h1, h2, h3 {
-    font-family: 'Orbitron', sans-serif; /* Headers */
-    color: var(--accent-color);
-  }
+  h1, h2, h3 { color: var(--accent-color); }
   
   /* ---------- HERO ---------- */
   .hero {
@@ -47,7 +38,6 @@
     align-items: center;
     justify-content: center;
     text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
-    text-align: center;
   }
   
   /* ---------- CARDS ---------- */
@@ -55,14 +45,11 @@
     background-color: var(--card-bg);
     border: 1px solid var(--border-color);
     border-radius: 12px;
-    padding: 1rem 1.5rem;
-    margin-bottom: 2rem;
     transition: background 0.3s, border-color 0.3s;
   }
   
   /* ---------- FOOTER ---------- */
   footer {
     font-size: 0.9rem;
-    font-family: 'Lora', serif;
   }
   
