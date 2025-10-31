@@ -21,20 +21,21 @@
   body {
     background-color: var(--bg-color);
     color: var(--text-color);
-    font-family: 'Le Monde Livre', serif; /* Paragraph text font */
+    font-family: 'Lora', serif; /* Paragraph text */
     transition: background 0.3s, color 0.3s;
+    line-height: 1.6;
   }
   
-  p {
-    font-family: 'Le Monde Livre', serif;
-    line-height: 1.6;
+  p, footer {
+    font-family: 'Lora', serif;
   }
   
   a { color: var(--link-color); }
   a:hover { text-decoration: underline; }
   
+  /* ---------- HEADERS ---------- */
   h1, h2, h3 {
-    font-family: 'Barlow Condensed', sans-serif; /* Header font */
+    font-family: 'Orbitron', sans-serif; /* Headers */
     color: var(--accent-color);
   }
   
@@ -62,6 +63,6 @@
   /* ---------- FOOTER ---------- */
   footer {
     font-size: 0.9rem;
-    font-family: 'Le Monde Livre', serif;
+    font-family: 'Lora', serif;
   }
   
