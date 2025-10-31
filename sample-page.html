@@ -4,159 +4,81 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Exploring Jupiter</title>
-  <style>
-    /* ---------- THEME COLORS ---------- */
-    :root {
-      --bg-color: #f9f9f7;
-      --text-color: #1c1c1c;
-      --accent-color: #c26b32;
-      --card-bg: #ffffff;
-      --link-color: #3366cc;
-      --border-color: #e0e0e0;
-    }
 
-    [data-theme="dark"] {
-      --bg-color: #0d1117;
-      --text-color: #e6e6e6;
-      --accent-color: #e07a3f;
-      --card-bg: #1c1c1e;
-      --link-color: #89b4ff;
-      --border-color: #2b2b2b;
-    }
+  <!-- Bootstrap 5 CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
 
-    /* ---------- GLOBAL STYLES ---------- */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="jupiter2.css">
 
-    body {
-      background: var(--bg-color);
-      color: var(--text-color);
-      font-family: "Inter", system-ui, sans-serif;
-      line-height: 1.6;
-      transition: background 0.3s ease, color 0.3s ease;
-      padding: 1rem;
-    }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 0;
-      border-bottom: 1px solid var(--border-color);
-    }
-
-    h1 {
-      font-size: 2rem;
-      color: var(--accent-color);
-    }
-
-    button {
-      background: none;
-      border: 2px solid var(--accent-color);
-      color: var(--accent-color);
-      padding: 0.5rem 1rem;
-      border-radius: 10px;
-      cursor: pointer;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    button:hover {
-      background: var(--accent-color);
-      color: var(--bg-color);
-    }
-
-    main {
-      max-width: 800px;
-      margin: 2rem auto;
-    }
-
-    section {
-      margin-bottom: 2rem;
-    }
-
-    h2 {
-      color: var(--accent-color);
-      margin-bottom: 0.5rem;
-    }
-
-    p {
-      margin-bottom: 1rem;
-    }
-
-    a {
-      color: var(--link-color);
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .card {
-      background-color: var(--card-bg);
-      padding: 1rem 1.5rem;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-      border: 1px solid var(--border-color);
-      transition: background 0.3s ease;
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem 0;
-      font-size: 0.9rem;
-      border-top: 1px solid var(--border-color);
-    }
-  </style>
+  <!-- MathJax -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script
+    id="MathJax-script"
+    async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+  ></script>
 </head>
+
 <body>
-  <header>
-    <h1>Exploring Jupiter</h1>
-    <button id="theme-toggle">Toggle Dark Mode</button>
+  <!-- HEADER -->
+  <header class="container-fluid d-flex justify-content-between align-items-center py-3 border-bottom">
+    <h1 class="mb-0">Exploring Jupiter</h1>
+    <button id="theme-toggle" class="btn btn-outline-primary">Toggle Dark Mode</button>
   </header>
 
-  <main>
-    <section>
-      <p>
-        Jupiter, the largest planet in our solar system, is a gas giant composed mostly of hydrogen and helium. 
-        Known for its colorful cloud bands and powerful storms, it has a mass more than 300 times that of Earth.
-      </p>
-    </section>
+  <!-- HERO -->
+  <section class="hero text-center text-light py-5">
+    <div class="container">
+      <h2 class="display-5 fw-bold">The Giant of the Solar System</h2>
+      <p class="lead">Learn about Jupiter's storms, moons, and magnetic mysteries</p>
+    </div>
+  </section>
 
-    <section class="card">
-      <h2>The Great Red Spot</h2>
-      <p>
-        A colossal storm larger than Earth that has been raging for centuries. 
-        Its reddish hue comes from complex organic molecules, red phosphorus, or other elements interacting in Jupiter’s atmosphere.
-      </p>
-    </section>
+  <!-- MAIN CONTENT -->
+  <main class="container my-5">
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="card p-4 shadow-sm">
+          <h3>The Great Red Spot</h3>
+          <p>
+            The <strong>Great Red Spot</strong> is a colossal storm larger than Earth that has been raging for centuries.
+          </p>
+          <p>
+            Gravitational force example: \( F = \frac{GMm}{r^2} \)
+          </p>
+        </div>
+      </div>
 
-    <section class="card">
-      <h2>Jupiter’s Moons</h2>
-      <p>
-        Jupiter has <strong>79 known moons</strong>, with the four largest being the <em>Galilean moons</em>: 
-        Io, Europa, Ganymede, and Callisto. 
-        <a href="https://solarsystem.nasa.gov/planets/jupiter/overview/" target="_blank">Learn more from NASA</a>.
-      </p>
-    </section>
-
-    <section>
-      <h2>Atmosphere and Magnetic Field</h2>
-      <p>
-        Jupiter’s atmosphere is composed mainly of hydrogen and helium, with traces of ammonia, methane, and water vapor.
-        Its magnetic field is 20,000 times stronger than Earth’s, producing intense radiation belts.
-      </p>
-    </section>
+      <div class="col-md-6">
+        <div class="card p-4 shadow-sm">
+          <h3>Jupiter’s Moons</h3>
+          <p>
+            Jupiter has <strong>79 known moons</strong>, including the Galilean moons: Io, Europa, Ganymede, and Callisto.
+          </p>
+          <a href="https://solarsystem.nasa.gov/planets/jupiter/overview/" target="_blank">Learn more from NASA →</a>
+        </div>
+      </div>
+    </div>
   </main>
 
-  <footer>
+  <!-- FOOTER -->
+  <footer class="text-center py-4 border-top">
     © 2025 Astronomy Course | Inspired by Jupiter 🌌
   </footer>
 
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- DARK/LIGHT MODE SCRIPT -->
   <script>
     const toggle = document.getElementById('theme-toggle');
     const root = document.documentElement;
@@ -164,14 +86,17 @@
     // Auto-detect system theme
     if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
       root.setAttribute('data-theme', 'dark');
+      toggle.textContent = 'Toggle Light Mode';
     }
 
-    // Toggle theme manually
+    // Toggle dark/light mode
     toggle.addEventListener('click', () => {
       const current = root.getAttribute('data-theme');
-      root.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
-      toggle.textContent = current === 'dark' ? 'Toggle Dark Mode' : 'Toggle Light Mode';
+      const newTheme = current === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', newTheme);
+      toggle.textContent = newTheme === 'dark' ? 'Toggle Light Mode' : 'Toggle Dark Mode';
     });
   </script>
 </body>
 </html>
+
