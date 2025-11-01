@@ -1,99 +1,229 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" class="dark"> <!-- Start in dark mode by default -->
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Exploring Jupiter</title>
-
-  <!-- Bootstrap & CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="jupiter2.css">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astronomy 101: A Voyage Through Space</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Inter font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Link to the new external stylesheet -->
+    <link rel="stylesheet" href="course_styles.css">
 </head>
+<body class="bg-white dark:bg-transparent text-gray-900 dark:text-gray-100 transition-colors duration-300">
 
-<body>
-  <!-- HEADER -->
-  <header class="py-3 border-bottom d-flex justify-content-between align-items-center px-4">
-    <h1 class="m-0">Exploring Jupiter</h1>
-    <button id="theme-toggle" class="btn btn-outline-primary">Toggle Dark Mode</button>
-  </header>
-
-  <!-- HERO BANNER -->
-  <section class="hero d-flex align-items-center text-center text-light">
-    <div class="container">
-      <h2 class="display-5 fw-bold mb-3">Journey to the Gas Giant</h2>
-      <p class="lead">Discover the beauty, power, and mysteries of Jupiter — the king of planets.</p>
+    <!-- Animated Starfield Background -->
+    <!-- This div is fixed and stays in the background -->
+    <div id="starfield">
+        <div class="stars stars-slow"></div>
+        <div class="stars stars-fast"></div>
     </div>
-  </section>
 
-  <!-- MAIN CONTENT -->
-  <main>
-    <section class="section-light">
-      <div class="container py-5">
-        <h2>Overview</h2>
-        <p>
-          Jupiter, the largest planet in our solar system, is a gas giant composed mostly of hydrogen and helium. 
-          Known for its colorful cloud bands and powerful storms, it has a mass more than 300 times that of Earth.
-        </p>
-      </div>
-    </section>
+    <!-- Main Page Wrapper -->
+    <!-- This div holds all the content and scrolls over the background -->
+    <div class="relative z-10">
 
-    <section class="section-dark">
-      <div class="container py-5">
-        <h2>The Great Red Spot</h2>
-        <p>
-          A colossal storm larger than Earth that has been raging for centuries. 
-          Its reddish hue may come from complex organic molecules, red phosphorus, or other compounds interacting in Jupiter’s atmosphere.
-        </p>
-      </div>
-    </section>
+        <!-- Header Section -->
+        <header class="border-b border-gray-200/20 dark:border-gray-700/50">
+            <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+                <!-- Course Title -->
+                <h1 class="text-xl font-bold text-blue-600 dark:text-blue-400">Astronomy 101</h1>
+                
+                <!-- Dark Mode Toggle Button -->
+                <button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors" aria-label="Toggle dark mode">
+                    <!-- Sun Icon (visible in dark mode) -->
+                    <svg class="h-6 w-6 text-yellow-400 hidden dark:block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-6.364-.386l1.591-1.591M3 12H.75m.386-6.364l1.591 1.591M12 12a2.25 2.25 0 00-2.25 2.25v.01c0 .317.031.625.093.924a6.75 6.75 0 0010.43 0c.062-.299.093-.607.093-.924v-.01A2.25 2.25 0 0012 12z" />
+                    </svg>
+                    <!-- Moon Icon (visible in light mode) -->
+                    <svg class="h-6 w-6 text-slate-700 block dark:hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+                    </svg>
+                </button>
+            </div>
+        </header>
 
-    <section class="section-light">
-      <div class="container py-5">
-        <h2>Jupiter’s Moons</h2>
-        <p>
-          Jupiter has <strong>79 known moons</strong>, with the four largest being the <em>Galilean moons</em>: 
-          Io, Europa, Ganymede, and Callisto. 
-          <a href="https://solarsystem.nasa.gov/planets/jupiter/overview/" target="_blank">Learn more from NASA</a>.
-        </p>
-      </div>
-    </section>
+        <!-- Hero Section -->
+        <!-- Increased height slightly to h-64 for better spacing when stacked -->
+        <section class="h-64 bg-gradient-to-r from-blue-100/80 to-purple-100/80 dark:from-blue-900/50 dark:to-purple-900/50 border-b border-gray-200/20 dark:border-gray-700/50">
+            <!-- Changed layout to flex-col, items-center, justify-center, and text-center -->
+            <div class="container mx-auto px-6 h-full flex flex-col items-center justify-center text-center">
+                <!-- Jupiter Image Placeholder -->
+                <div> <!-- Removed width and shrink classes -->
+                    <img src="https://placehold.co/150x150/1e293b/ffffff?text=Jupiter&font=inter" 
+                         alt="Illustration of the planet Jupiter" 
+                         class="rounded-full w-32 h-32 md:w-36 md:h-36 object-cover shadow-lg border-4 border-white dark:border-slate-700"
+                         onerror="this.src='https://placehold.co/150x150/1e293b/ffffff?text=Image+Not+Found&font=inter'">
+                </div>
+                
+                <!-- Page Title & Subtitle -->
+                <!-- Removed width/text-align classes and added margin-top for spacing -->
+                <div class="mt-4">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">A Voyage Through Space</h2>
+                    <p class="mt-2 text-lg text-gray-700 dark:text-gray-300">Module 1: Introduction to our Solar System</p>
+                </div>
+            </div>
+        </section>
 
-    <section class="section-dark">
-      <div class="container py-5">
-        <h2>Atmosphere and Magnetic Field</h2>
-        <p>
-          Jupiter's atmosphere is composed mainly of hydrogen and helium, with traces of ammonia, methane, and water vapor.
-          Its magnetic field is 20,000 times stronger than Earth's, producing intense radiation belts.
-        </p>
-      </div>
-    </section>
-  </main>
+        <!-- "Jump to" Navigation Menu -->
+        <!-- This becomes sticky when you scroll past the hero -->
+        <nav class="sticky top-0 z-20 bg-white/70 dark:bg-slate-900/70 backdrop-blur-md dark:backdrop-blur-md border-b border-gray-200/20 dark:border-gray-700/50 shadow-sm">
+            <div class="container mx-auto px-6 py-3 flex items-center flex-wrap">
+                <span class="font-semibold text-gray-700 dark:text-gray-300 mr-4">Jump to:</span>
+                <div class="flex flex-wrap gap-x-4 gap-y-2">
+                    <a href="#section1" class="text-blue-600 dark:text-blue-400 hover:underline">1. Our Sun</a>
+                    <a href="#subsection1-1" class="text-sm text-gray-600 dark:text-gray-400 hover:underline pl-4">&bull; 1.1 Solar Flares</a>
+                    <a href="#section2" class="text-blue-600 dark:text-blue-400 hover:underline">2. The Planets</a>
+                    <a href="#subsection2-1" class="text-sm text-gray-600 dark:text-gray-400 hover:underline pl-4">&bull; 2.1 Terrestrial</a>
+                    <a href="#subsection2-2" class="text-sm text-gray-600 dark:text-gray-400 hover:underline pl-4">&bull; 2.2 Gas Giants</a>
+                    <a href="#section3" class="text-blue-600 dark:text-blue-400 hover:underline">3. Beyond</a>
+                </div>
+            </div>
+        </nav>
 
-  <!-- FOOTER -->
-  <footer class="text-center py-4 border-top">
-    © 2025 Astronomy Course | Inspired by Jupiter 🌌
-  </footer>
+        <!-- Main Content Area -->
+        <main class="container mx-auto p-6">
+            
+            <!-- "Floating" Content Card -->
+            <div class="content-card max-w-4xl mx-auto rounded-lg shadow-xl p-6 sm:p-10">
+                
+                <!-- Welcome Introduction -->
+                <div class="prose prose-lg dark:prose-invert max-w-none mb-12">
+                    <p class="text-lg">Welcome, future astronomers! This first module will take you on a journey from the center of our solar system, the Sun, out to its farthest reaches. We'll explore the planets, moons, and other celestial bodies that call our cosmic neighborhood home.</p>
+                </div>
 
-  <!-- MathJax -->
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+                <!-- Section 1 -->
+                <section id="section1" class="mb-12 scroll-mt-24"> <!-- scroll-mt-24 offsets for sticky nav -->
+                    <h3 class="text-2xl font-bold border-b border-blue-500/50 dark:border-blue-400/50 pb-2 mb-4">
+                        1. Our Sun: The System's Star
+                    </h3>
+                    <p class="mb-4 text-gray-800 dark:text-gray-300">
+                        The Sun is the star at the center of the Solar System. It is a nearly perfect ball of hot plasma, heated to incandescence by nuclear fusion reactions in its core. The Sun radiates this energy mainly as light, ultraviolet, and infrared radiation, and is the most important source of energy for life on Earth.
+                    </p>
+                    <p class="text-gray-800 dark:text-gray-300">
+                        It accounts for about 99.86% of the total mass of the Solar System. Its diameter is about 109 times that of Earth, and its mass is about 330,000 times that of Earth.
+                    </p>
 
-  <!-- Theme Toggle -->
-  <script>
-    const toggle = document.getElementById('theme-toggle');
-    const root = document.documentElement;
+                    <!-- Subsection 1.1 -->
+                    <article id="subsection1-1" class="mt-8 pl-4 border-l-4 border-gray-300 dark:border-gray-600 scroll-mt-24">
+                        <h4 class="text-xl font-semibold mb-2">1.1 Solar Flares and CMEs</h4>
+                        <p class="text-gray-800 dark:text-gray-300">
+                            A solar flare is a sudden flash of increased brightness on the Sun, usually observed near its surface and in close proximity to a sunspot group. Powerful flares are often, but not always, accompanied by a coronal mass ejection (CME). A CME is a significant release of plasma and accompanying magnetic field from the solar corona. They can cause geomagnetic storms on Earth, which may disrupt satellites and power grids.
+                        </p>
+                    </article>
+                </section>
 
-    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      root.setAttribute('data-theme', 'dark');
-    }
+                <!-- Section 2 -->
+                <section id="section2" class="mb-12 scroll-mt-24">
+                    <h3 class="text-2xl font-bold border-b border-blue-500/50 dark:border-blue-400/50 pb-2 mb-4">
+                        2. The Planets
+                    </h3>
+                    <p class="mb-4 text-gray-800 dark:text-gray-300">
+                        Our solar system has eight planets, which are traditionally divided into two groups: the inner terrestrial planets and the outer gas (and ice) giants.
+                    </p>
 
-    toggle.addEventListener('click', () => {
-      const current = root.getAttribute('data-theme');
-      root.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
-      toggle.textContent = current === 'dark' ? 'Toggle Dark Mode' : 'Toggle Light Mode';
-    });
-  </script>
+                    <!-- Subsection 2.1 -->
+                    <article id="subsection2-1" class="mt-8 pl-4 border-l-4 border-gray-300 dark:border-gray-600 scroll-mt-24">
+                        <h4 class="text-xl font-semibold mb-2">2.1 The Terrestrial Planets</h4>
+                        <p class="mb-2 text-gray-800 dark:text-gray-300">
+                            These are the four planets closest to the sun: Mercury, Venus, Earth, and Mars. They are called "terrestrial" because they have a compact, rocky surface like Earth's.
+                        </p>
+                        <ul class="list-disc list-inside text-gray-800 dark:text-gray-300">
+                            <li><strong>Mercury:</strong> The smallest planet and closest to the Sun.</li>
+                            <li><strong>Venus:</strong> Earth's "sister planet" with a thick, toxic atmosphere.</li>
+                            <li><strong>Earth:</strong> Our home, the only known planet with liquid water on its surface.</li>
+                            <li><strong>Mars:</strong> The "Red Planet," a cold desert world with a thin atmosphere.</li>
+                        </ul>
+                    </article>
+
+                    <!-- Subsection 2.2 -->
+                    <article id="subsection2-2" class="mt-8 pl-4 border-l-4 border-gray-300 dark:border-gray-600 scroll-mt-24">
+                        <h4 class="text-xl font-semibold mb-2">2.2 The Gas and Ice Giants</h4>
+                        <p class="mb-2 text-gray-800 dark:text-gray-300">
+                            These are the four large outer planets. Jupiter and Saturn are "gas giants," composed mainly of hydrogen and helium. Uranus and Neptune are "ice giants," composed of water, ammonia, and methane ices.
+                        </p>
+                         <ul class="list-disc list-inside text-gray-800 dark:text-gray-300">
+                            <li><strong>Jupiter:</strong> The largest planet, known for its Great Red Spot.</li>
+                            <li><strong>Saturn:</strong> Famous for its extensive and beautiful ring system.</li>
+                            <li><strong>Uranus:</strong> Tilted on its side, it rotates at an almost 90-degree angle.</li>
+                            <li><strong>Neptune:</strong> The most distant planet, a dark, cold world with strong winds.</li>
+                        </ul>
+                    </article>
+                </section>
+
+                <!-- Section 3 -->
+                <section id="section3" class="mb-12 scroll-mt-24">
+                    <h3 class="text-2xl font-bold border-b border-blue-500/50 dark:border-blue-400/50 pb-2 mb-4">
+                        3. Beyond the Planets
+                    </h3>
+                    <p class="text-gray-800 dark:text-gray-300">
+                        Beyond Neptune lies the Kuiper Belt, a region of icy bodies including the dwarf planet Pluto. Even farther out is the Oort Cloud, a theoretical sphere of icy planetesimals believed to be the source of long-period comets. Our solar system is a vast and mysterious place, with much still left to discover.
+                    </p>
+                </section>
+
+            </div> <!-- End of "floating" content card -->
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="text-center p-10 text-gray-500 dark:text-gray-400 text-sm">
+            <p>&copy; 2025 Your University Name. All rights reserved.</p>
+            <p>Course Prototype</p>
+        </footer>
+
+    </div> <!-- End of main page wrapper -->
+
+
+    <!-- Dark Mode Toggle JavaScript -->
+    <script>
+        (function() {
+            const themeToggleBtn = document.getElementById('theme-toggle');
+            const htmlElement = document.documentElement;
+
+            // Function to toggle theme
+            function toggleTheme() {
+                htmlElement.classList.toggle('dark');
+                // Save preference to localStorage
+                if (htmlElement.classList.contains('dark')) {
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    localStorage.setItem('theme', 'light');
+                }
+            }
+
+            // Set initial theme based on localStorage or system preference
+            function setInitialTheme() {
+                const storedTheme = localStorage.getItem('theme');
+                if (storedTheme) {
+                    // Use stored theme
+                    if (storedTheme === 'dark') {
+                        htmlElement.classList.add('dark');
+                    } else {
+                        htmlElement.classList.remove('dark');
+                    }
+                } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    // Use system preference if no theme is stored (and system isn't 'light')
+                    htmlElement.classList.add('dark');
+                } else {
+                    // Default to light if no preference and system is light
+                    // But since we default the HTML tag to 'dark', we only remove it if system is light
+                    if (!window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                         htmlElement.classList.remove('dark');
+                    }
+                }
+            }
+
+            // Add click listener
+            themeToggleBtn.addEventListener('click', toggleTheme);
+
+            // Set the theme on initial load
+            setInitialTheme();
+        })();
+    </script>
+
 </body>
 </html>
