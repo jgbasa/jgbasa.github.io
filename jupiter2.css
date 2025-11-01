@@ -1,11 +1,11 @@
 /* ---------- THEME COLORS ---------- */
 :root {
-    --bg-color: #e3b57d;
+    --bg-color: #e1e0c1;
     --text-color: #432616;
     --accent-color: #c7580f;
-    --card-bg: #e1e0c1;
-    --link-color: #f09d47;
-    --border-color: #915334;
+    --card-bg: #e3b57d;
+    --link-color: #915334;
+    --border-color: #f09d47;
   }
   
   [data-theme="dark"] {
