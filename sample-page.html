@@ -4,52 +4,75 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Exploring Jupiter</title>
+
+  <!-- Bootstrap & CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="jupiter2.css">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <header class="d-flex justify-content-between align-items-center py-3 border-bottom px-3">
+  <!-- HEADER -->
+  <header class="py-3 border-bottom d-flex justify-content-between align-items-center px-4">
     <h1 class="m-0">Exploring Jupiter</h1>
     <button id="theme-toggle" class="btn btn-outline-primary">Toggle Dark Mode</button>
   </header>
 
-  <main class="container my-5">
-    <section class="py-4 section-alt">
-      <p>
-        Jupiter, the largest planet in our solar system, is a gas giant composed mostly of hydrogen and helium. 
-        Known for its colorful cloud bands and powerful storms, it has a mass more than 300 times that of Earth.
-      </p>
+  <!-- HERO BANNER -->
+  <section class="hero d-flex align-items-center text-center text-light">
+    <div class="container">
+      <h2 class="display-5 fw-bold mb-3">Journey to the Gas Giant</h2>
+      <p class="lead">Discover the beauty, power, and mysteries of Jupiter — the king of planets.</p>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <section class="section-light">
+      <div class="container py-5">
+        <h2>Overview</h2>
+        <p>
+          Jupiter, the largest planet in our solar system, is a gas giant composed mostly of hydrogen and helium. 
+          Known for its colorful cloud bands and powerful storms, it has a mass more than 300 times that of Earth.
+        </p>
+      </div>
     </section>
 
-    <section class="card my-4 p-4">
-      <h2>The Great Red Spot</h2>
-      <p>
-        A colossal storm larger than Earth that has been raging for centuries. 
-        Its reddish hue comes from complex organic molecules, red phosphorus, or other elements interacting in Jupiter’s atmosphere.
-      </p>
+    <section class="section-dark">
+      <div class="container py-5">
+        <h2>The Great Red Spot</h2>
+        <p>
+          A colossal storm larger than Earth that has been raging for centuries. 
+          Its reddish hue may come from complex organic molecules, red phosphorus, or other compounds interacting in Jupiter’s atmosphere.
+        </p>
+      </div>
     </section>
 
-    <section class="card my-4 p-4">
-      <h2>Jupiter's Moons</h2>
-      <p>
-        Jupiter has <strong>79 known moons</strong>, with the four largest being the <em>Galilean moons</em>: 
-        Io, Europa, Ganymede, and Callisto. 
-        <a href="https://solarsystem.nasa.gov/planets/jupiter/overview/" target="_blank">Learn more from NASA</a>.
-      </p>
+    <section class="section-light">
+      <div class="container py-5">
+        <h2>Jupiter’s Moons</h2>
+        <p>
+          Jupiter has <strong>79 known moons</strong>, with the four largest being the <em>Galilean moons</em>: 
+          Io, Europa, Ganymede, and Callisto. 
+          <a href="https://solarsystem.nasa.gov/planets/jupiter/overview/" target="_blank">Learn more from NASA</a>.
+        </p>
+      </div>
     </section>
 
-    <section class="py-4 section-alt">
-      <h2>Atmosphere and Magnetic Field</h2>
-      <p>
-        Jupiter’s atmosphere is composed mainly of hydrogen and helium, with traces of ammonia, methane, and water vapor.
-        Its magnetic field is 20,000 times stronger than Earth’s, producing intense radiation belts.
-      </p>
+    <section class="section-dark">
+      <div class="container py-5">
+        <h2>Atmosphere and Magnetic Field</h2>
+        <p>
+          Jupiter's atmosphere is composed mainly of hydrogen and helium, with traces of ammonia, methane, and water vapor.
+          Its magnetic field is 20,000 times stronger than Earth's, producing intense radiation belts.
+        </p>
+      </div>
     </section>
   </main>
 
+  <!-- FOOTER -->
   <footer class="text-center py-4 border-top">
     © 2025 Astronomy Course | Inspired by Jupiter 🌌
   </footer>
@@ -57,6 +80,7 @@
   <!-- MathJax -->
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
+  <!-- Theme Toggle -->
   <script>
     const toggle = document.getElementById('theme-toggle');
     const root = document.documentElement;
