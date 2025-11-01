@@ -1,6 +1,8 @@
 /* Use Inter font */
 body {
     font-family: 'Inter', sans-serif;
+    /* Added transition for smooth color changes when toggling themes */
+    transition: background-color 0.3s ease-in-out; 
 }
 
 /* Set color scheme for dark mode */
@@ -8,9 +10,10 @@ html[data-bs-theme="dark"] {
     color-scheme: dark;
 }
 
-/* Make the body transparent in dark mode to see the starfield */
+/* Dark Mode: Make body transparent to reveal the fixed starfield */
+/* Added !important to ensure transparency overrides the Bootstrap bg-body class, which was likely obscuring the stars. */
 html[data-bs-theme="dark"] body {
-    background-color: transparent;
+    background-color: transparent !important;
 }
 
 
