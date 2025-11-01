@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- data-bs-theme="dark" is Bootstrap's way of setting dark mode -->
 <html lang="en" data-bs-theme="dark"> 
 <head>
     <meta charset="UTF-8">
@@ -17,7 +18,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- 4. Your Custom Stylesheet -->
-    <link rel="stylesheet" href="jupiter2.css">
+    <link rel="stylesheet" href="course_styles.css">
 
     <!-- 5. MathJax Configuration -->
     <script>
@@ -65,28 +66,30 @@
             </div>
         </header>
 
-        <!-- Hero Section (Centered) -->
-        <!-- We use custom classes 'hero-section' and 'hero-image' defined in course_styles.css -->
+        <!-- Hero Section (Centered: Image Left, Text Right) -->
         <section class="hero-section border-bottom border-secondary-subtle">
-            <div class="container h-100 d-flex flex-column align-items-center justify-content-center text-center">
-                <!-- Jupiter Image Placeholder -->
-                <div>
-                    <img src="https://placehold.co/150x150/1e293b/ffffff?text=Jupiter&font=inter" 
-                         alt="Illustration of the planet Jupiter" 
-                         class="hero-image rounded-circle shadow-lg border border-4 border-white"
-                         onerror="this.src='https://placehold.co/150x150/1e293b/ffffff?text=Image+Not+Found&font=inter'">
-                </div>
-                
-                <!-- Page Title & Subtitle -->
-                <div class="mt-4">
-                    <h2 class="h1 fw-bold">A Voyage Through Space</h2>
-                    <p class="fs-5 text-body-secondary">Module 1: Introduction to our Solar System</p>
+            <div class="container h-100 d-flex align-items-center justify-content-center">
+                <!-- The row makes the image and text align horizontally on medium screens and up -->
+                <div class="row w-100 align-items-center justify-content-center g-3">
+                    
+                    <!-- Jupiter Image (Col-auto ensures it only takes the necessary width) -->
+                    <div class="col-auto text-center">
+                        <img src="https://placehold.co/150x150/1e293b/ffffff?text=Jupiter&font=inter" 
+                             alt="Illustration of the planet Jupiter" 
+                             class="hero-image rounded-circle shadow-lg border border-4 border-white"
+                             onerror="this.src='https://placehold.co/150x150/1e293b/ffffff?text=Image+Not+Found&font=inter'">
+                    </div>
+                    
+                    <!-- Page Title & Subtitle (Col-auto keeps it close to the image) -->
+                    <div class="col-auto text-center text-md-start">
+                        <h2 class="h1 fw-bold">A Voyage Through Space</h2>
+                        <p class="fs-5 text-body-secondary">Module 1: Introduction to our Solar System</p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- "Jump to" Navigation Menu -->
-        <!-- 'sticky-nav' is a custom class for the blur/transparent background -->
         <nav class="sticky-nav sticky-top z-2 border-bottom border-secondary-subtle shadow-sm">
             <div class="container px-4 py-3 d-flex align-items-center flex-wrap">
                 <span class="fw-semibold text-body-secondary me-3">Jump to:</span>
@@ -104,9 +107,8 @@
         <!-- Main Content Area -->
         <main class="container my-5">
             
-            <!-- "Floating" Content Card -->
-            <!-- Using Bootstrap grid columns for a responsive max-width -->
-            <div class="content-card col-lg-10 col-xl-8 mx-auto rounded-3 shadow-xl p-4 p-sm-5">
+            <!-- "Floating" Content Card (Now wider: col-lg-11 col-xl-10) -->
+            <div class="content-card col-lg-11 col-xl-10 mx-auto rounded-3 shadow-xl p-4 p-sm-5">
                 
                 <!-- Welcome Introduction -->
                 <div class="fs-5 mb-5">
@@ -122,18 +124,21 @@
                         The Sun is the star at the center of the Solar System. It is a nearly perfect ball of hot plasma, heated to incandescence by nuclear fusion reactions in its core. The Sun radiates this energy mainly as light, ultraviolet, and infrared radiation, and is the most important source of energy for life on Earth.
                     </p>
                     <p class="mb-3">
-                        It accounts for about 99.86% of the total mass of the Solar System. Its diameter is about 109 times that of Earth, and its mass ($M_{\odot}$) is about 330,000 times that of Earth. This mass ($M$) is the source of its immense gravity, which can be described by the famous equation:
+                        It accounts for about 99.86% of the total mass of the Solar System. Its diameter is about 109 times that of Earth, and its mass ($\mathbf{M_{\odot}}$) is about 330,000 times that of Earth. This mass ($\mathbf{M}$) is the source of its immense gravity, which can be described by the famous equation:
                     </p>
                     <!-- MathJax Display Equation -->
                     <p class="text-center fs-4 my-4">
-                        $$E = mc^2$$
+                        $$\mathbf{E} = \mathbf{mc^2}$$
                     </p>
 
                     <!-- Subsection 1.1 -->
                     <article id="subsection1-1" class="mt-4 ps-3 border-start border-4 border-secondary-subtle" style="scroll-margin-top: 8rem;">
                         <h4 class="h4 fw-semibold mb-2">1.1 Solar Flares and CMEs</h4>
                         <p>
-                            A solar flare is a sudden flash of increased brightness on the Sun, usually observed near its surface and in close proximity to a sunspot group. Powerful flares are often, but not always, accompanied by a coronal mass ejection (CME). A CME is a significant release of plasma and accompanying magnetic field from the solar corona.
+                            A solar flare is a sudden flash of increased brightness on the Sun, usually observed near its surface and in close proximity to a sunspot group. Powerful flares are often, but not always, accompanied by a coronal mass ejection ($\mathbf{CME}$), which can be modeled with the magnetic field strength $\mathbf{B}$ and plasma velocity $\mathbf{v}$ using the Lorentz force $\mathbf{F}$:
+                        </p>
+                        <p class="text-center fs-4 my-4">
+                            $$\mathbf{F} = q(\mathbf{E} + \mathbf{v} \times \mathbf{B})$$
                         </p>
                     </article>
                 </section>

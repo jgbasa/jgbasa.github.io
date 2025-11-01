@@ -14,9 +14,7 @@ html[data-bs-theme="dark"] body {
 }
 
 
-/* --- Starfield Animation (Unchanged) --- */
-/* This creates the animated background */
-
+/* --- Starfield Animation (Increased Density) --- */
 #starfield {
     position: fixed;
     top: 0;
@@ -24,12 +22,10 @@ html[data-bs-theme="dark"] body {
     width: 100%;
     height: 100%;
     z-index: -10;
-    /* A base dark blue, space-like background */
     background: #0d1117; 
     overflow: hidden;
 }
 
-/* Keyframes to move the stars */
 @keyframes move-stars-slow {
     from { transform: translateY(0); }
     to { transform: translateY(-100vh); }
@@ -54,7 +50,7 @@ html[data-bs-theme="dark"] body {
     height: 200vh;
     animation-name: move-stars-slow;
     animation-duration: 100s;
-    /* Tiny white stars */
+    /* Increased number of tiny white stars (7 -> 14) */
     background-image: 
         radial-gradient(1px 1px at 20% 30%, white, rgba(255,255,255,0)),
         radial-gradient(1px 1px at 40% 70%, white, rgba(255,255,255,0)),
@@ -62,19 +58,32 @@ html[data-bs-theme="dark"] body {
         radial-gradient(1px 1px at 80% 20%, white, rgba(255,255,255,0)),
         radial-gradient(1px 1px at 50% 50%, white, rgba(255,255,255,0)),
         radial-gradient(1px 1px at 10% 90%, white, rgba(255,255,255,0)),
-        radial-gradient(1px 1px at 90% 10%, white, rgba(255,255,255,0));
+        radial-gradient(1px 1px at 90% 10%, white, rgba(255,255,255,0)),
+        /* New stars below */
+        radial-gradient(1px 1px at 25% 15%, white, rgba(255,255,255,0)),
+        radial-gradient(1px 1px at 45% 85%, white, rgba(255,255,255,0)),
+        radial-gradient(1px 1px at 65% 5%, white, rgba(255,255,255,0)),
+        radial-gradient(1px 1px at 75% 95%, white, rgba(255,255,255,0)),
+        radial-gradient(1px 1px at 5% 45%, white, rgba(255,255,255,0)),
+        radial-gradient(1px 1px at 35% 55%, white, rgba(255,255,255,0)),
+        radial-gradient(1px 1px at 85% 75%, white, rgba(255,255,255,0));
 }
 
 .stars-fast {
     height: 200vh;
     animation-name: move-stars-fast;
     animation-duration: 50s;
-    /* Slightly larger, brighter stars */
+    /* Increased number of slightly larger, brighter stars (4 -> 8) */
     background-image: 
         radial-gradient(2px 2px at 10% 20%, white, rgba(255,255,255,0)),
         radial-gradient(2px 2px at 30% 60%, white, rgba(255,255,255,0)),
         radial-gradient(2px 2px at 70% 40%, white, rgba(255,255,255,0)),
-        radial-gradient(1px 1px at 90% 80%, white, rgba(255,255,255,0));
+        radial-gradient(1px 1px at 90% 80%, white, rgba(255,255,255,0)),
+        /* New stars below */
+        radial-gradient(2px 2px at 5% 55%, white, rgba(255,255,255,0)),
+        radial-gradient(2px 2px at 80% 15%, white, rgba(255,255,255,0)),
+        radial-gradient(2px 2px at 45% 90%, white, rgba(255,255,255,0)),
+        radial-gradient(1px 1px at 25% 5%, white, rgba(255,255,255,0));
 }
 /* --- End Starfield --- */
 
@@ -114,6 +123,8 @@ html[data-bs-theme="dark"] .hero-section {
 .hero-image {
     width: 9rem;  /* 144px, same as md:w-36 */
     height: 9rem; /* 144px, same as md:h-36 */
+    /* Added white border styling here for better appearance */
+    border-color: #ffffff !important;
 }
 /* Smaller hero image on mobile, like original Tailwind */
 @media (max-width: 767px) {
