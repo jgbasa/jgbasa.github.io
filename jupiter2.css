@@ -1,55 +1,106 @@
-/* ---------- THEME COLORS ---------- */
+/* ---------- COLOR PALETTE ---------- */
 :root {
-    --bg-color: #e1e0c1;
-    --text-color: #432616;
-    --accent-color: #c7580f;
-    --card-bg: #e3b57d;
-    --link-color: #915334;
-    --border-color: #f09d47;
+    --bg-primary: #ffffff;
+    --bg-secondary: #e4dcd1;
+    --text-color: #180f0a;
+    --accent-color: #c12f1e;
+    --link-color: #d77133;
+    --accent-warm: #be7643;
+    --card-bg: #ffffff;
+    --border-color: #ddd;
   }
   
   [data-theme="dark"] {
-    --bg-color: #0d1117;
-    --text-color: #e6e6e6;
-    --accent-color: #e07a3f;
+    --bg-primary: #180f0a;
+    --bg-secondary: #23140e;
+    --text-color: #e4dcd1;
+    --accent-color: #ff5c3f;
+    --link-color: #f28c52;
+    --accent-warm: #d4895d;
     --card-bg: #1c1c1e;
-    --link-color: #89b4ff;
-    --border-color: #2b2b2b;
+    --border-color: #3b2a22;
   }
   
-  /* ---------- BODY ---------- */
+  /* ---------- BASE STYLES ---------- */
   body {
-    background-color: var(--bg-color);
+    background: var(--bg-primary);
     color: var(--text-color);
-    font-family: "Inter", system-ui, sans-serif;
-    transition: background 0.3s, color 0.3s;
+    font-family: "Open Sans", system-ui, sans-serif;
+    line-height: 1.7;
+    transition: background 0.3s ease, color 0.3s ease;
   }
   
-  a { color: var(--link-color); }
-  a:hover { text-decoration: underline; }
+  header, footer {
+    background-color: var(--bg-primary);
+    border-color: var(--border-color);
+  }
   
-  h1, h2, h3 { color: var(--accent-color); }
+  /* ---------- TYPOGRAPHY ---------- */
+  h1, h2, h3 {
+    font-family: "Playfair Display", serif;
+    color: var(--accent-color);
+    font-weight: 600;
+  }
   
-  /* ---------- HERO ---------- */
-  .hero {
-    background: url('https://upload.wikimedia.org/wikipedia/commons/e/e2/Jupiter.jpg') center/cover no-repeat;
-    height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+  p {
+    font-size: 1.05rem;
+    color: var(--text-color);
+  }
+  
+  /* ---------- LINKS ---------- */
+  a {
+    color: var(--link-color);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  a:hover {
+    color: var(--accent-warm);
+    text-decoration: underline;
+  }
+  
+  /* ---------- SECTIONS ---------- */
+  .section-alt {
+    background-color: var(--bg-secondary);
+    padding: 2rem;
+    border-top: 3px solid var(--accent-warm);
+    border-bottom: 3px solid var(--accent-warm);
+    border-radius: 12px;
+    margin-bottom: 2rem;
   }
   
   /* ---------- CARDS ---------- */
   .card {
     background-color: var(--card-bg);
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--accent-warm);
     border-radius: 12px;
-    transition: background 0.3s, border-color 0.3s;
+    box-shadow: 0 3px 10px rgba(190, 118, 67, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(190, 118, 67, 0.35);
+  }
+  
+  /* ---------- BUTTONS ---------- */
+  .btn-outline-primary {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+    font-weight: 600;
+  }
+  
+  .btn-outline-primary:hover {
+    background-color: var(--accent-warm);
+    border-color: var(--accent-warm);
+    color: #fff;
   }
   
   /* ---------- FOOTER ---------- */
   footer {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+    background-color: var(--bg-secondary);
+    border-top: 3px solid var(--accent-warm);
   }
+  
   
