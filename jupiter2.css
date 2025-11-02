@@ -161,3 +161,9 @@ html[data-bs-theme="dark"] .sticky-nav {
 
 html[data-bs-theme="dark"] #theme-icon-sun { display: inline-block; }
 html[data-bs-theme="dark"] #theme-icon-moon { display: none; }
+
+/* --- Footer Style: Unified Color for Both Modes --- */
+footer {
+    /* Set color to medium grey for good visibility on both light and dark card backgrounds */
+    color: #6c757d; 
+}
