@@ -1,26 +1,28 @@
 <!DOCTYPE html>
-<!-- data-bs-theme="dark" is Bootstrap's way of setting dark mode -->
 <html lang="en" data-bs-theme="dark"> 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Astronomy 101: A Voyage Through Space</title>
+    <title>SCI 201: Introduction to Astronomy</title>
     
-    <!-- 1. Bootstrap 5 CSS -->
+    <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     
-    <!-- 2. Bootstrap Icons CSS -->
+    <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    <!-- 3. Google Font -->
+    <!-- CEL Icons -->
+    <link rel="stylesheet" href="https://cel-icons.cel.uwaterloo.ca/style.css">
+
+    <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- 4. Your Custom Stylesheet -->
+    <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="jupiter2.css">
 
-    <!-- 5. MathJax Configuration -->
+    <!-- MathJax Settings -->
     <script>
         MathJax = {
           tex: {
@@ -33,16 +35,15 @@
           }
         };
     </script>
-    <!-- 6. MathJax Library -->
+    <!-- MathJax Library -->
     <script type="text/javascript" id="MathJax-script" async
       src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
     </script>
 
 </head>
-<!-- bg-body and text-body will adapt to light/dark mode automatically -->
 <body class="bg-body text-body">
 
-    <!-- Animated Starfield Background -->
+    <!-- Animated Background -->
     <div id="starfield">
         <div class="stars stars-slow"></div>
         <div class="stars stars-fast"></div>
@@ -51,13 +52,12 @@
     <!-- Main Page Wrapper -->
     <div class="position-relative z-1">
 
-        <!-- Header Section -->
+        <!-- Header -->
         <header class="border-bottom border-secondary-subtle">
             <div class="container px-4 py-3 d-flex justify-content-between align-items-center">
-                <!-- Course Title -->
                 <h1 class="h5 mb-0 fw-bold text-primary">Astronomy 101</h1>
                 
-                <!-- Dark Mode Toggle Button -->
+                <!-- Dark Mode -->
                 <button id="theme-toggle" class="btn btn-outline-secondary rounded-circle p-2 lh-1" aria-label="Toggle dark mode">
                     <!-- Bootstrap Icons -->
                     <i class="bi bi-sun-fill" id="theme-icon-sun"></i>
@@ -66,24 +66,20 @@
             </div>
         </header>
 
-        <!-- Hero Section (Centered: Image Left, Text Right) -->
+        <!-- Hero -->
         <section class="hero-section border-bottom border-secondary-subtle">
             <div class="container h-100 d-flex align-items-center justify-content-center">
-                <!-- The row makes the image and text align horizontally on medium screens and up -->
                 <div class="row w-100 align-items-center justify-content-center g-3">
-                    
-                    <!-- Jupiter Image (Col-auto ensures it only takes the necessary width) -->
                     <div class="col-auto text-center">
                         <img src="https://placehold.co/150x150/1e293b/ffffff?text=Jupiter&font=inter" 
-                             alt="Illustration of the planet Jupiter" 
-                             class="hero-image rounded-circle shadow-lg border border-4 border-white"
-                             onerror="this.src='https://placehold.co/150x150/1e293b/ffffff?text=Image+Not+Found&font=inter'">
+                        alt="Illustration of the planet Jupiter" 
+                        class="hero-image rounded-circle shadow-lg border border-4 border-white"
+                        onerror="this.src='https://placehold.co/150x150/1e293b/ffffff?text=Image+Not+Found&font=inter'">
                     </div>
                     
-                    <!-- Page Title & Subtitle (Col-auto keeps it close to the image) -->
                     <div class="col-auto text-center text-md-start">
-                        <h2 class="h1 fw-bold">A Voyage Through Space</h2>
-                        <p class="fs-5 text-body-secondary">Module 1: Introduction to our Solar System</p>
+                        <h2 class="h1 fw-bold">Exploring Jupiter</h2>
+                        <p class="fs-5 text-body-secondary">The Giant of Our Solar System</p>
                     </div>
                 </div>
             </div>
@@ -95,11 +91,8 @@
                 <span class="fw-semibold text-body-secondary me-3">Jump to:</span>
                 <div class="d-flex flex-wrap" style="gap: 0.5rem 1rem;">
                     <a href="#section1" class="link-primary text-decoration-none">1. Our Sun</a>
-                    <a href="#subsection1-1" class="link-secondary text-decoration-none ps-3">&bull; 1.1 Solar Flares</a>
-                    <a href="#section2" class="link-primary text-decoration-none">2. The Planets</a>
-                    <a href="#subsection2-1" class="link-secondary text-decoration-none ps-3">&bull; 2.1 Terrestrial</a>
-                    <a href="#subsection2-2" class="link-secondary text-decoration-none ps-3">&bull; 2.2 Gas Giants</a>
-                    <a href="#section3" class="link-primary text-decoration-none">3. Beyond</a>
+                    <a href="#section2" class="link-primary text-decoration-none"> | 2. The Planets</a>
+                    <a href="#section3" class="link-primary text-decoration-none"> | 3. Beyond</a>
                 </div>
             </div>
         </nav>
