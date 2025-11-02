@@ -11,8 +11,6 @@ html[data-bs-theme="dark"] body {
     background-color: transparent !important;
 }
 
-
-/* --- Starfield Animation (Increased Density) --- */
 #starfield {
     position: fixed;
     top: 0;
@@ -47,7 +45,7 @@ html[data-bs-theme="dark"] body {
 .stars-slow {
     height: 200vh;
     animation-name: move-stars-slow;
-    animation-duration: 100s;
+    animation-duration: 50s;
     background-image: 
         radial-gradient(1px 1px at 5% 45%, white, rgba(255,255,255,0)),
         radial-gradient(1px 1px at 15% 25%, white, rgba(255,255,255,0)),
@@ -75,7 +73,7 @@ html[data-bs-theme="dark"] body {
 .stars-fast {
     height: 200vh;
     animation-name: move-stars-fast;
-    animation-duration: 50s;
+    animation-duration: 25s;
     background-image: 
         radial-gradient(2px 2px at 10% 20%, white, rgba(255,255,255,0)),
         radial-gradient(2px 2px at 30% 60%, white, rgba(255,255,255,0)),
@@ -93,51 +91,39 @@ html[data-bs-theme="dark"] body {
         radial-gradient(2px 2px at 40% 30%, white, rgba(255,255,255,0)),
         radial-gradient(1px 1px at 25% 5%, white, rgba(255,255,255,0));
 }
-/* --- End Starfield --- */
 
-
-/* Smooth scrolling */
 html {
     scroll-behavior: smooth;
 }
 
-/* "Floating" Content Card */
 .content-card {
-    /* Replicates light mode bg-white with 90% opacity */
     background-color: rgba(255, 255, 255, 0.9);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    /* ENHANCED SHADOW for a better floating effect */
     box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.2), 0 8px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
 html[data-bs-theme="dark"] .content-card {
-    /* Replicates dark:bg-slate-800 (Tailwind) with 90% opacity */
     background-color: rgba(30, 41, 59, 0.9); 
-    /* Slightly less visible shadow in dark mode, but still pronounced */
     box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.4), 0 8px 15px -3px rgba(0, 0, 0, 0.2);
 }
 
-/* Custom Hero Section Styles */
 .hero-section {
-    height: 16rem; /* 256px, same as h-64 */
-    /* Replicates from-blue-100/80 to-purple-100/80 */
+    height: 12.5rem; /* 200px, same as h-64 */
     background-image: linear-gradient(to right, rgba(224, 231, 255, 0.8), rgba(235, 224, 255, 0.8));
     transition: background-image 0.3s ease-in-out;
 }
 
 html[data-bs-theme="dark"] .hero-section {
-    /* Replicates dark:from-blue-900/50 dark:to-purple-900/50 */
     background-image: linear-gradient(to right, rgba(30, 58, 138, 0.5), rgba(76, 29, 149, 0.5));
 }
 
 .hero-image {
     width: 9rem;  /* 144px, same as md:w-36 */
     height: 9rem; /* 144px, same as md:h-36 */
-    /* Added white border styling here for better appearance */
     border-color: #ffffff !important;
 }
-/* Smaller hero image on mobile, like original Tailwind */
+
 @media (max-width: 767px) {
     .hero-image {
         width: 8rem;  /* 128px, same as w-32 */
@@ -145,9 +131,7 @@ html[data-bs-theme="dark"] .hero-section {
     }
 }
 
-/* Custom Sticky Nav Styles */
 .sticky-nav {
-    /* Replicates bg-white/70 backdrop-blur-md */
     background-color: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -155,8 +139,6 @@ html[data-bs-theme="dark"] .hero-section {
 }
 
 html[data-bs-theme="dark"] .sticky-nav {
-    /* Replicates dark:bg-slate-900/70 */
-    /* Using dark:bg-body-tertiary from Bootstrap as a base, with opacity */
     background-color: rgba(33, 37, 41, 0.7); 
 }
 
@@ -166,13 +148,9 @@ html[data-bs-theme="dark"] .sticky-nav {
 html[data-bs-theme="dark"] #theme-icon-sun { display: inline-block; }
 html[data-bs-theme="dark"] #theme-icon-moon { display: none; }
 
-/* --- Footer Style: Unified Color for Both Modes --- */
 footer {
-    /* Set color to medium grey for good visibility on both light and dark card backgrounds */
     color: #6c757d !important; 
 }
-
-/* FUN FACTS TABS */
 
 .underline-tabs .nav-link {
     border: none;
@@ -193,7 +171,6 @@ footer {
     color: #0d6efd;
 }
 
-/* Content Animation */
 .tab-pane.fade {
     transition: all 0.2s ease-out;
 }
@@ -226,4 +203,116 @@ footer {
     border-left: 6px solid var(--bs-primary);
     padding-left: 1.25rem;
     margin-left: 0;
+}
+
+:root {
+    --timeline-accent: #3b82f6;
+    --timeline-line: #6b7280;
+}
+
+.timeline-section {
+    position: relative;
+}
+
+.timeline {
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.timeline-line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--timeline-line);
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.timeline-item {
+    position: relative;
+    flex: 1;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.timeline-dot {
+    width: 20px;
+    height: 20px;
+    background: var(--timeline-accent);
+    border-radius: 50%;
+    margin: 0 auto;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.timeline-item:hover .timeline-dot {
+    transform: scale(1.3);
+    box-shadow: 0 0 0 8px rgba(59, 130, 246, 0.5); 
+    transition: all 0.3s ease;
+}
+
+.timeline-label {
+    position: absolute;
+    width: 100px;
+    left: 50%;
+    transform: translateX(-50%) scale(1);
+    font-weight: 500;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.timeline-item:hover .timeline-label {
+    transform: translateX(-50%) scale(1.1);
+}
+
+.timeline-item:nth-child(odd) .timeline-label {
+    top: -55px;
+}
+
+.timeline-item:nth-child(even) .timeline-label {
+    bottom: -55px;
+}
+
+@media (max-width: 768px) {
+    .timeline {
+        flex-direction: column;
+        margin-left: 50px;
+        margin-right: 20px;
+    }
+    .timeline-line {
+        top: 0;
+        left: 20px;
+        width: 4px;
+        height: 100%;
+        transform: none;
+    }
+    .timeline-item {
+        margin-bottom: 80px;
+        text-align: left !important;
+        width: 100%;
+    }
+    .timeline-dot {
+        position: absolute;
+        left: -30px;
+        top: 0;
+        margin: 0;
+    }
+    .timeline-label {
+        position: static;
+        transform: none;
+        width: auto;
+        padding-left: 20px;
+        white-space: normal;
+        margin-top: -10px;
+    }
+    .timeline-item:nth-child(odd) .timeline-label,
+    .timeline-item:nth-child(even) .timeline-label {
+        top: auto;
+        bottom: auto;
+    }
+    .timeline-item:hover .timeline-label {
+        transform: none;
+    }
 }

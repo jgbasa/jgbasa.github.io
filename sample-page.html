@@ -138,7 +138,7 @@
 
                 <!-- Section 2 -->
                 <section id="section2" class="mb-5" style="scroll-margin-top: 5rem;">
-                    <h3 class="h2 fw-bold border-bottom border-primary-subtle pt-2 mt-4 pb-2 mb-2">
+                    <h3 class="h3 fw-bold border-bottom border-primary-subtle pt-2 mt-4 pb-2 mb-2">
                         Fun Facts
                     </h3>
                     <!-- Use underlined tabs here: https://bootstrapexamples.com/@prajwal/underlined-tabs-with-bootstrap-5 -->
@@ -265,7 +265,7 @@
 
                 <!-- Section 3 -->
                 <section id="section3" class="mb-3" style="scroll-margin-top: 5rem;">
-                    <h3 class="h2 fw-bold border-bottom border-primary-subtle pt-2 mt-4 pb-2 mb-2">
+                    <h3 class="h3 fw-bold border-bottom border-primary-subtle pt-2 mt-4 pb-2 mb-2">
                         Juno
                     </h3>
                     <p>
@@ -275,7 +275,7 @@
                     <div class="content-card bg-white p-4 shadow-lg rounded-3 mb-5">
                         <h4 class="text-primary-emphasis mb-3">Eyes on the Solar System: Jupiter</h4>
                         <p class="text-secondary mb-3">
-                            Explore Jupiter's current position, moons, and the path of the Juno spacecraft in a real-time, using data and images from NASA missions. Use your mouse to zoom and rotate the view.
+                            Explore Jupiter's current position, moons, and the path of the Juno spacecraft in real-time, using data and images from NASA missions. Use your mouse to zoom and rotate the view.
                         </p>
 
                         <!-- Responsive Container for the Jupiter iFrame -->
@@ -289,7 +289,7 @@
                             </iframe>
                         </div>
                         
-                        <p class="small text-start text-muted mt-2">Source: NASA/JPL-Caltech Eyes on the Solar System</p>
+                        <i class="text-secondary-emphasis">Source: NASA/JPL-Caltech</i>
                     </div>
                 </section>
 
@@ -297,11 +297,100 @@
 
                 <!-- Section 4 -->
                 <section id="section4" class="mb-3" style="scroll-margin-top: 5rem;">
-                    <h3 class="h2 fw-bold border-bottom border-primary-subtle pt-2 mt-4 pb-2 mb-2">
+                    <h3 class="h3 fw-bold border-bottom border-primary-subtle pt-2 mt-4 pb-2 mb-2">
                         Future Plans
                     </h3>
+                    <p>There is growing interest in exploring Jupiter's large icy moons, which may harbor subsurface oceans beneath their frozen crusts. <i>Click the dots on the timeline below to see detailed information on each mission.</i></p>
+                    <!-- Timeline Section -->
+                    <section id="timeline" class="timeline-section py-5">
+                        <div class="timeline d-flex justify-content-between position-relative">
+                
+                            <!-- Timeline Item -->
+                            <div class="timeline-item text-center" data-bs-toggle="modal" data-bs-target="#jupmodal1">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-label bg-primary text-white">2005</div>
+                            </div>
+                
+                            <div class="timeline-item text-center" data-bs-toggle="modal" data-bs-target="#jupmodal2">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-label bg-primary text-white">2011</div>
+                            </div>
+                
+                            <div class="timeline-item text-center" data-bs-toggle="modal" data-bs-target="#jupmodal3">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-label bg-primary text-white">2023</div>
+                            </div>
+                
+                            <div class="timeline-item text-center" data-bs-toggle="modal" data-bs-target="#jupmodal4">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-label bg-primary text-white">2024</div>
+                            </div>
+                
+                            <div class="timeline-item text-center" data-bs-toggle="modal" data-bs-target="#jupmodal5">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-label bg-primary text-white">2035</div>
+                            </div>
+                
+                            <div class="timeline-item text-center" data-bs-toggle="modal" data-bs-target="#jupmodal6">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-label bg-primary text-white">Other</div>
+                            </div>
+                
+                            <!-- Timeline Base Line -->
+                            <div class="timeline-line"></div>
+                        </div>
+                    </section>
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="col d-flex align-items-start">
+                                <div class="icon-square bg-light text-dark flex-shrink-0 me-3">
+                                    <span class="celicon-reading-fill celicon-m"></span>
+                                </div>
+                                <div>
+                                  <h4>Read This</h4>
+                                  <p>Read <a href="">Chapter 11: The Giant Planets</a> in the online textbook.</p>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
                 </section>
 
+                <hr style="border:solid 2px">
+
+                <!-- Check Your Understanding -->
+
+                <section class="mb-3" style="scroll-margin-top: 5rem;">
+                    <h4 class="h4 fw-bold border-bottom border-primary-subtle pt-2 mt-4 pb-2 mb-2">
+                        Check Your Understanding
+                    </h4>
+                    <p>For convenience distances around Jupiter are given in multiples of Jupiter's radius, which is 71,600 km. This unit is called RJ, so that, for example, a distance of 3.0 RJ corresponds to 3 x (71,600 km) or 214,800 km. If the formula for Juno's elliptical orbit is given by: $$38x^2 + 400y^2 = 15,200$$ Where $x$ and $y$ are in units of RJ. What is the equation for Juno's orbit written in Standard Form for an ellipse?</p>
+                    <p>
+                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                            View full solution
+                        </button>
+                      </p>
+                      <div class="collapse" id="collapseExample">
+                        <div class="card card-body">
+                            Divide both sides by 15,200 and simplify to Standard Form:
+                            $$\frac{38x^2}{15200} + \frac{400y^2}{15200} = 1$$
+                            so, in Standard Form, we have:
+                            $$\frac{x^2}{20^2} + \frac{y^2}{6.2^2}=1$$
+                            <p>Thus, the semi-major axis is <b>b = 6.2 RJ</b> and is along the <b>x-axis</b>. The semi-minor axis is <b>a = 20 RJ</b> and is along the <b>y-axis</b>.</p>
+                        </div>
+                      </div>
+                </section>
+
+                <!-- References -->
+                <section class="mb-3" style="scroll-margin-top: 5rem;">
+                    <h4 class="h4 fw-bold border-bottom border-primary-subtle pt-2 mt-4 pb-2 mb-2">
+                        References
+                    </h4>
+                    <ul>
+                        <li>NASA. (n.d.). Investigating the Elliptical Orbit of Juno around Jupiter. Space Math. <a href="https://spacemath.gsfc.nasa.gov/planets/JUNO5.pdf">https://spacemath.gsfc.nasa.gov/planets/JUNO5.pdf</a></li>
+                        <li>NASA. (n.d.). Jupiter. <a href="https://science.nasa.gov/jupiter/">https://science.nasa.gov/jupiter/</a></li>
+                        <li>Wikipedia contributors. (2025, September 29). Juno (spacecraft). In Wikipedia, The Free Encyclopedia. Retrieved 18:00, October 30, 2025, from <a href="https://en.wikipedia.org/w/index.php?title=Juno_(spacecraft)&oldid=1314110222">https://en.wikipedia.org/w/index.php?title=Juno_(spacecraft)&oldid=1314110222</a></li>
+                    </ul>
+                </section>
             </div>
         </main>
 
@@ -396,6 +485,86 @@
         // Also update on window resize (since scroll height might change)
         window.addEventListener('resize', updateProgressBar);
     </script>
+
+    <!-- Timeline Modals -->
+    <div class="modal fade" id="jupmodal1" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title">2005: Jupiter Icy Moons Orbiter</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+            <p>NASA's early plans for the Jupiter Icy Moons Orbiter were canceled in 2005 due to funding challenges.</p>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="modal fade" id="jupmodal2" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title">2011: EJSM/Laplace</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+            <p>A joint mission between NASA and the European Space Agency (ESA), known as EJSM/Laplace, was later proposed to study Europa and Ganymede, but ESA withdrew from the partnership in 2011, citing budgetary constraints.</p>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="modal fade" id="jupmodal3" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title">2023: JUICE</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+            <p>ESA then pursued its own mission, resulting in the launch of the Jupiter Icy Moons Explorer (JUICE) in April 2023.</p>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="modal fade" id="jupmodal4" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title">2024: Europa Clipper</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+            <p>NASA followed with the Europa Clipper mission, launched in October 2024.</p>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="modal fade" id="jupmodal5" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title">2035: China's Tianwen-4</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+            <p>Other future missions include China's Tianwen-4, targeting the Jovian system around 2035.</p>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="modal fade" id="jupmodal6" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title">Other</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+            <p>Long-range probes like Interstellar Express and NASA's Interstellar Probe, which plan to use Jupiter's gravity to assist in reaching the outer edges of the heliosphere.</p>
+            </div>
+        </div>
+        </div>
+    </div>
 
 </body>
 </html>
