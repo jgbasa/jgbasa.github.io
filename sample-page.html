@@ -55,7 +55,7 @@
         <!-- Header -->
         <header class="border-bottom border-secondary-subtle">
             <div class="container px-4 py-3 d-flex justify-content-between align-items-center">
-                <h1 class="h5 mb-0 fw-bold text-primary">SCI 201: Introductory Astronomy</h1>
+                <h1 class="h5 mb-0 fw-bold text-primary text-highlight-subtle">SCI 201: Introductory Astronomy</h1>
                 
                 <!-- Dark Mode -->
                 <button id="theme-toggle" class="btn btn-outline-secondary rounded-circle p-2 lh-1" aria-label="Toggle dark mode">
@@ -85,103 +85,229 @@
             </div>
         </section>
 
-        <nav class="sticky-nav sticky-top z-2 border-bottom border-secondary-subtle shadow-sm">
-            <div class="container px-4 py-3 d-flex align-items-center flex-wrap justify-content-center">
-                <span class="fw-semibold text-body-secondary me-3">Jump to:</span>
-                <div class="d-flex flex-wrap " style="gap: 0.5rem 1rem;">
-                    <a href="#section1" class="link-primary text-decoration-none">1. Our Sun</a>
-                    <a href="#section2" class="link-primary text-decoration-none">&nbsp;|&nbsp;2. The Planets</a>
-                    <a href="#section3" class="link-primary text-decoration-none">&nbsp;|&nbsp;3. Beyond</a>
+        <div class="sticky-top" style="z-index: 1000;">
+            <!-- Navigation Bar -->
+            <nav class="sticky-nav shadow-sm py-2">
+                <div class="container-xxl d-flex justify-content-center">
+                    <!-- Jump To Menu -->
+                    <div class="d-flex flex-wrap align-items-center" style="gap: 0.5rem 1rem;">
+                        <span class="fw-semibold text-body-secondary me-3">Jump to:</span>
+                        <div class="d-flex flex-wrap " style="gap: 2rem 1rem;">
+                            <a href="#section1" class="link-primary text-decoration-none">Introduction</a>
+                            <a href="#section2" class="link-primary text-decoration-none">|&nbsp;&nbsp;&nbsp;Fun Facts</a>
+                            <a href="#section3" class="link-primary text-decoration-none">|&nbsp;&nbsp;&nbsp;Juno</a>
+                            <a href="#section4" class="link-primary text-decoration-none">|&nbsp;&nbsp;&nbsp;Future Plans</a>
+                        </div>
+                    </div>
                 </div>
+            </nav>
+        
+            <!-- Progress Bar (Sticks with the nav bar) -->
+            <div class="progress" style="height: 5px; border-radius: 0;">
+                <div id="progressBar" class="progress-bar bg-primary" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
-        </nav>
+        </div>
 
         <!-- Main Content -->
         <main class="container my-5">
             <div class="content-card col-lg-11 col-xl-10 mx-auto rounded-3 shadow-xl p-4 p-sm-5">
                 <!-- Section 1 -->
-                <section id="section1" class="mb-5" style="scroll-margin-top: 8rem;">
-                    <h3 class="h2 fw-bold border-bottom border-primary-subtle pb-2 mb-4">
-                        1. Our Sun: The System's Star
-                    </h3>
-                    <p class="mb-3">
-                        The Sun is the star at the center of the Solar System. It is a nearly perfect ball of hot plasma, heated to incandescence by nuclear fusion reactions in its core. The Sun radiates this energy mainly as light, ultraviolet, and infrared radiation, and is the most important source of energy for life on Earth.
-                    </p>
-                    <p class="mb-3">
-                        It accounts for about 99.86% of the total mass of the Solar System. Its diameter is about 109 times that of Earth, and its mass ($\mathbf{M_{\odot}}$) is about 330,000 times that of Earth. This mass ($\mathbf{M}$) is the source of its immense gravity, which can be described by the famous equation:
-                    </p>
-                    <!-- MathJax Display Equation -->
-                    <p class="text-center fs-4 my-4">
-                        $$\mathbf{E} = \mathbf{mc^2}$$
-                    </p>
-
-                    <!-- Subsection 1.1 -->
-                    <article id="subsection1-1" class="mt-4 ps-3 border-start border-4 border-secondary-subtle" style="scroll-margin-top: 8rem;">
-                        <h4 class="h4 fw-semibold mb-2">1.1 Solar Flares and CMEs</h4>
-                        <p>
-                            A solar flare is a sudden flash of increased brightness on the Sun, usually observed near its surface and in close proximity to a sunspot group. Powerful flares are often, but not always, accompanied by a coronal mass ejection ($\mathbf{CME}$), which can be modeled with the magnetic field strength $\mathbf{B}$ and plasma velocity $\mathbf{v}$ using the Lorentz force $\mathbf{F}$:
-                        </p>
-                        <p class="text-center fs-4 my-4">
-                            $$\mathbf{F} = q(\mathbf{E} + \mathbf{v} \times \mathbf{B})$$
-                        </p>
-                    </article>
+                <section id="section1" class="mb-5" style="scroll-margin-top: 5rem;">
+                    <div class="row featurette">
+                        <div class="col-md-7">
+                          <h3 class="featurette-heading">We now focus our attention on Jupiter, the largest planet in our solar system.</h3>
+                          <p class="lead">Its swirling clouds and massive storms, including the famous Great Red Spot, make it a fascinating subject of study.</p>
+                          <p>Jupiter has a strong magnetic field and dozens of moons, including the four largest: Io, Europa, Ganymede, and Callisto. These are known as the Galilean moons. These moons are diverse in composition and activity, with Europa being a prime candidate in the search for extraterrestrial life due to its subsurface ocean.</p>
+                        </div>
+                        <div class="col-md-5">
+                            <figure class="figure mx-auto d-block w-100" style="max-width: 500px;">
+                                <img src="jupiter/images/jupiter-nir.webp"
+                                    class="figure-img img-fluid rounded border border-5 border-secondary-subtle"
+                                    alt="Illustration of Jupiter, showing its Great Red Spot and cloud bands.">
+                                <figcaption class="figure-caption text-end">
+                                    Jupiter is the fifth planet from the Sun and the largest in the Solar System.
+                                    <br>
+                                    <i class="text-secondary-emphasis">Source: NASA/JPL-Caltech</i>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
                 </section>
+
+                <hr style="border:solid 2px">
 
                 <!-- Section 2 -->
-                <section id="section2" class="mb-5" style="scroll-margin-top: 8rem;">
-                    <h3 class="h2 fw-bold border-bottom border-primary-subtle pb-2 mb-4">
-                        2. The Planets
+                <section id="section2" class="mb-5" style="scroll-margin-top: 5rem;">
+                    <h3 class="h2 fw-bold border-bottom border-primary-subtle pt-2 mt-4 pb-2 mb-2">
+                        Fun Facts
                     </h3>
-                    <p class="mb-3">
-                        Our solar system has eight planets, which are traditionally divided into two groups: the inner terrestrial planets and the outer gas (and ice) giants.
-                    </p>
-
-                    <!-- Subsection 2.1 -->
-                    <article id="subsection2-1" class="mt-4 ps-3 border-start border-4 border-secondary-subtle" style="scroll-margin-top: 8rem;">
-                        <h4 class="h4 fw-semibold mb-2">2.1 The Terrestrial Planets</h4>
-                        <p class="mb-2">
-                            These are the four planets closest to the sun: Mercury, Venus, Earth, and Mars. They are called "terrestrial" because they have a compact, rocky surface like Earth's.
-                        </p>
-                        <ul class="ps-4">
-                            <li><strong>Mercury:</strong> The smallest planet and closest to the Sun.</li>
-                            <li><strong>Venus:</strong> Earth's "sister planet" with a thick, toxic atmosphere.</li>
-                            <li><strong>Earth:</strong> Our home, the only known planet with liquid water on its surface.</li>
-                            <li><strong>Mars:</strong> The "Red Planet," a cold desert world with a thin atmosphere.</li>
+                    <!-- Use underlined tabs here: https://bootstrapexamples.com/@prajwal/underlined-tabs-with-bootstrap-5 -->
+                    <div class="underline-tabs">
+                        <ul class="nav nav-tabs" id="underlineTabs" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="gravity" data-bs-toggle="tab" data-bs-target="#gravity2" type="button" role="tab">
+                                    Gravity
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="brightness" data-bs-toggle="tab" data-bs-target="#brightness2" type="button" role="tab">
+                                    Brightness
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="mass" data-bs-toggle="tab" data-bs-target="#mass2" type="button" role="tab">
+                                    Mass
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="core" data-bs-toggle="tab" data-bs-target="#core2" type="button" role="tab">
+                                    Core
+                                </button>
+                            </li>
                         </ul>
-                    </article>
+                        <div class="tab-content" id="underlineTabsContent">
+                            <div class="tab-pane fade show active" id="gravity2" role="tabpanel">
+                                <div class="row featurette mt-4 mb-3">
+                                    <div class="col-md-5">
+                                        <figure class="figure mx-auto d-block w-100" style="max-width: 500px;">
+                                            <img src="jupiter/images/jup-gravity.jpg"
+                                                class="figure-img img-fluid rounded border border-4 border-secondary-subtle img-grayscale"
+                                                alt="Illustration of Jupiter, showing its Great Red Spot and cloud bands.">
+                                            <figcaption class="figure-caption text-start">
+                                                <i class="text-secondary-emphasis">Source: NASA/JPL-Caltech</i>
+                                            </figcaption>
+                                        </figure>
+                                    </div>
+                                    <div class="col-md-7">
+                                      <h3 class="featurette-heading">Gravity</h3>
+                                      <p>Jupiter is so massive that its gravity influences the orbits of other objects in the solar system, acting as a kind of cosmic vacuum cleaner.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="brightness2" role="tabpanel">
+                                <div class="row featurette mt-4 mb-3">
+                                    <div class="col-md-5">
+                                        <figure class="figure mx-auto d-block w-100" style="max-width: 500px;">
+                                            <img src="jupiter/images/jup-brightness.jpg"
+                                                class="figure-img img-fluid rounded border border-4 border-secondary-subtle img-grayscale"
+                                                alt="Illustration of Jupiter, showing its Great Red Spot and cloud bands.">
+                                            <figcaption class="figure-caption text-start">
+                                                <i class="text-secondary-emphasis">Source: NASA/JPL-Caltech</i>
+                                            </figcaption>
+                                        </figure>
+                                    </div>
+                                    <div class="col-md-7">
+                                      <h3 class="featurette-heading">Brightness</h3>
+                                      <p>Jupiter is the 4th brightest object in the night sky.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="mass2" role="tabpanel">
+                                <div class="row featurette mt-4 mb-3">
+                                    <div class="col-md-5">
+                                        <figure class="figure mx-auto d-block w-100" style="max-width: 500px;">
+                                            <img src="jupiter/images/jup-mass.jpg"
+                                                class="figure-img img-fluid rounded border border-4 border-secondary-subtle img-grayscale"
+                                                alt="Illustration of Jupiter, showing its Great Red Spot and cloud bands.">
+                                            <figcaption class="figure-caption text-start">
+                                                <i class="text-secondary-emphasis">Source: NASA/JPL-Caltech</i>
+                                            </figcaption>
+                                        </figure>
+                                    </div>
+                                    <div class="col-md-7">
+                                      <h3 class="featurette-heading">Mass</h3>
+                                      <p>Jupiter has enough mass to make 318 Earths!</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="core2" role="tabpanel">
+                                <div class="row featurette mt-4 mb-3">
+                                    <div class="col-md-5">
+                                        <figure class="figure mx-auto d-block w-100" style="max-width: 500px;">
+                                            <img src="jupiter/images/jup-core.jpg"
+                                                class="figure-img img-fluid rounded border border-4 border-secondary-subtle img-grayscale"
+                                                alt="Illustration of Jupiter, showing its Great Red Spot and cloud bands.">
+                                            <figcaption class="figure-caption text-start">
+                                                <i class="text-secondary-emphasis">Source: NASA/JPL-Caltech</i>
+                                            </figcaption>
+                                        </figure>
+                                    </div>
+                                    <div class="col-md-7">
+                                      <h3 class="featurette-heading">Core</h3>
+                                      <p>New research shows the core of Jupiter is isn't solid as was previously believed!</p>
+                                      <p><a href="https://www.sciencedaily.com/releases/2025/08/250821224559.htm"><small class="text-secondary">Read more about this new research</a> <span class="celicon-arrow-right-fill-contained text-primary"></span></small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Jupiter also has a faint ring system, discovered by the Voyager spacecraft. Though not as prominent as Saturn's rings, they add to the planet's complexity. The planet completes a rotation in just under 10 hours, making its day the shortest of all the planets.</p>
 
-                    <!-- Subsection 2.2 -->
-                    <article id="subsection2-2" class="mt-4 ps-3 border-start border-4 border-secondary-subtle" style="scroll-margin-top: 8rem;">
-                        <h4 class="h4 fw-semibold mb-2">2.2 The Gas and Ice Giants</h4>
-                        <p class="mb-2">
-                            These are the four large outer planets. Jupiter and Saturn are "gas giants," composed mainly of hydrogen and helium. Uranus and Neptune are "ice giants," composed of water, ammonia, and methane 10.
-                        </p>
-                         <ul class="ps-4">
-                            <li><strong>Jupiter:</strong> The largest planet, known for its Great Red Spot.</li>
-                            <li><strong>Saturn:</strong> Famous for its extensive and beautiful ring system.</li>
-                            <li><strong>Uranus:</strong> Tilted on its side, it rotates at an almost 90-degree angle.</li>
-                            <li><strong>Neptune:</strong> The most distant planet, a dark, cold world with strong winds.</li>
-                        </ul>
-                    </article>
+                    <br>
+
+                    <figure class="blockquote-primary-stripe">
+                        <blockquote class="blockquote">
+                            <p>Weather forecast for Jupiter's South Equatorial Belt: cloudy with a chance of ammonia.</p>
+                        </blockquote>
+                        <figcaption class="blockquote-footer">
+                            Dr. Heidi B. Hammel
+                        </figcaption>
+                    </figure>
+
+                    <br>
+
+                    <h4>Calculating Jupiter's Surface Gravity</h4>
+                    <p>Jupiter's surface gravity can be calculated using the formula: $$g = \frac{GM}{r^2}$$ Where $G$ is the gravitational constant, $M$ is the mass of Jupiter, and $r$ is its radius. Its escape velocity is given by: $$v_e = \sqrt{\frac{2GM}{r}}$$ </p>
+                    <p>This high escape velocity makes it difficult for spacecraft to leave its gravitational influence once captured.</p>
                 </section>
 
+                <hr style="border:solid 2px">
+
                 <!-- Section 3 -->
-                <section id="section3" class="mb-3" style="scroll-margin-top: 8rem;">
-                    <h3 class="h2 fw-bold border-bottom border-primary-subtle pb-2 mb-4">
-                        3. Beyond the Planets
+                <section id="section3" class="mb-3" style="scroll-margin-top: 5rem;">
+                    <h3 class="h2 fw-bold border-bottom border-primary-subtle pt-2 mt-4 pb-2 mb-2">
+                        Juno
                     </h3>
                     <p>
-                        Beyond Neptune lies the Kuiper Belt, a region of icy bodies including the dwarf planet Pluto. Even farther out is the Oort Cloud, a theoretical sphere of icy planetesimals believed to be the source of long-period comets. Our solar system is a vast and mysterious place, with much still left to discover.
+                        The Juno mission is a NASA space probe launched on August 5, 2011, as part of the New Frontiers program to study Jupiter. Built by Lockheed Martin and operated by NASA's Jet Propulsion Laboratory, Juno entered a polar orbit around Jupiter on July 5, 2016. Its primary objectives include investigating Jupiter’s composition, gravity, magnetic field, and polar magnetosphere to gain insights into the planet’s formation and structure. Unlike previous outer solar system missions powered by nuclear energy, Juno uses solar panels—the largest ever deployed on a planetary probe at launch. Originally planned for 37 orbits over 20 months, the mission has been extended through September 2025, allowing for additional exploration of Jupiter's rings and inner moons.
                     </p>
+
+                    <div class="content-card bg-white p-4 shadow-lg rounded-3 mb-5">
+                        <h4 class="text-primary-emphasis mb-3">Eyes on the Solar System: Jupiter</h4>
+                        <p class="text-secondary mb-3">
+                            Explore Jupiter's current position, moons, and the path of the Juno spacecraft in a real-time, using data and images from NASA missions. Use your mouse to zoom and rotate the view.
+                        </p>
+
+                        <!-- Responsive Container for the Jupiter iFrame -->
+                        <div class="ratio ratio-16x9 my-4 rounded border border-5 border-secondary-subtle">
+                            <iframe 
+                                src="https://eyes.jpl.nasa.gov/apps/solar-system/#/jupiter" 
+                                title="NASA Interactive 3D View of Jupiter" 
+                                allowfullscreen 
+                                frameborder="0"
+                                style="min-height: 400px;">
+                            </iframe>
+                        </div>
+                        
+                        <p class="small text-start text-muted mt-2">Source: NASA/JPL-Caltech Eyes on the Solar System</p>
+                    </div>
+                </section>
+
+                <hr style="border:solid 2px">
+
+                <!-- Section 4 -->
+                <section id="section4" class="mb-3" style="scroll-margin-top: 5rem;">
+                    <h3 class="h2 fw-bold border-bottom border-primary-subtle pt-2 mt-4 pb-2 mb-2">
+                        Future Plans
+                    </h3>
                 </section>
 
             </div>
         </main>
 
         <!-- Footer -->
-        <footer class="text-center p-5 text-body-secondary small">
-            <p>&copy; 2025 Your University Name. All rights reserved.</p>
-            <p>Course Prototype</p>
+        <footer class="text-center p-5 small">
+            <p>&copy; 2025 Centre for Extended Learning, University of Waterloo.</p>
         </footer>
 
     </div> <!-- End of main page wrapper -->
@@ -240,6 +366,35 @@
             // Set the theme on initial load
             setInitialTheme();
         })();
+
+        function updateProgressBar() {
+            // Get the scroll position
+            const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            
+            // Get the total scrollable height (document height - viewport height)
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            
+            // Calculate the percentage scrolled
+            const scrolled = (scrollTop / scrollHeight) * 100;
+            
+            // Get the progress bar element
+            const progressBar = document.getElementById('progressBar');
+            
+            // Update the width of the progress bar
+            if (progressBar) {
+                progressBar.style.width = scrolled + '%';
+                progressBar.setAttribute('aria-valuenow', scrolled.toFixed(2));
+            }
+        }
+
+        // Attach the function to the scroll event
+        window.addEventListener('scroll', updateProgressBar);
+
+        // Call it once on load to initialize the bar position
+        document.addEventListener('DOMContentLoaded', updateProgressBar);
+
+        // Also update on window resize (since scroll height might change)
+        window.addEventListener('resize', updateProgressBar);
     </script>
 
 </body>

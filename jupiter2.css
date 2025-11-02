@@ -1,17 +1,12 @@
-/* Use Inter font */
 body {
     font-family: 'Inter', sans-serif;
-    /* Added transition for smooth color changes when toggling themes */
     transition: background-color 0.3s ease-in-out; 
 }
 
-/* Set color scheme for dark mode */
 html[data-bs-theme="dark"] {
     color-scheme: dark;
 }
 
-/* Dark Mode: Make body transparent to reveal the fixed starfield */
-/* The !important flag is essential here to override Bootstrap's default bg-body class. */
 html[data-bs-theme="dark"] body {
     background-color: transparent !important;
 }
@@ -53,39 +48,49 @@ html[data-bs-theme="dark"] body {
     height: 200vh;
     animation-name: move-stars-slow;
     animation-duration: 100s;
-    /* Increased number of tiny white stars (7 -> 14) */
     background-image: 
-        radial-gradient(1px 1px at 20% 30%, white, rgba(255,255,255,0)),
-        radial-gradient(1px 1px at 40% 70%, white, rgba(255,255,255,0)),
-        radial-gradient(1px 1px at 60% 80%, white, rgba(255,255,255,0)),
-        radial-gradient(1px 1px at 80% 20%, white, rgba(255,255,255,0)),
-        radial-gradient(1px 1px at 50% 50%, white, rgba(255,255,255,0)),
+        radial-gradient(1px 1px at 5% 45%, white, rgba(255,255,255,0)),
+        radial-gradient(1px 1px at 15% 25%, white, rgba(255,255,255,0)),
         radial-gradient(1px 1px at 10% 90%, white, rgba(255,255,255,0)),
-        radial-gradient(1px 1px at 90% 10%, white, rgba(255,255,255,0)),
-        /* New stars below */
+        radial-gradient(1px 1px at 30% 40%, white, rgba(255,255,255,0)),
+        radial-gradient(1px 1px at 20% 30%, white, rgba(255,255,255,0)),
         radial-gradient(1px 1px at 25% 15%, white, rgba(255,255,255,0)),
+        radial-gradient(1px 1px at 35% 55%, white, rgba(255,255,255,0)),
+        radial-gradient(1px 1px at 40% 70%, white, rgba(255,255,255,0)),
         radial-gradient(1px 1px at 45% 85%, white, rgba(255,255,255,0)),
+        radial-gradient(1px 1px at 50% 50%, white, rgba(255,255,255,0)),
+        radial-gradient(1px 1px at 60% 80%, white, rgba(255,255,255,0)),
         radial-gradient(1px 1px at 65% 5%, white, rgba(255,255,255,0)),
         radial-gradient(1px 1px at 75% 95%, white, rgba(255,255,255,0)),
-        radial-gradient(1px 1px at 5% 45%, white, rgba(255,255,255,0)),
-        radial-gradient(1px 1px at 35% 55%, white, rgba(255,255,255,0)),
-        radial-gradient(1px 1px at 85% 75%, white, rgba(255,255,255,0));
+        radial-gradient(1px 1px at 80% 20%, white, rgba(255,255,255,0)),
+        radial-gradient(1px 1px at 85% 75%, white, rgba(255,255,255,0)),
+        radial-gradient(1px 1px at 95% 35%, white, rgba(255,255,255,0)),
+        radial-gradient(1px 1px at 70% 60%, white, rgba(255,255,255,0)),
+        radial-gradient(1px 1px at 55% 10%, white, rgba(255,255,255,0)),
+        radial-gradient(1px 1px at 90% 40%, white, rgba(255,255,255,0)),
+        radial-gradient(1px 1px at 30% 5%, white, rgba(255,255,255,0)),
+        radial-gradient(1px 1px at 90% 10%, white, rgba(255,255,255,0));
 }
 
 .stars-fast {
     height: 200vh;
     animation-name: move-stars-fast;
     animation-duration: 50s;
-    /* Increased number of slightly larger, brighter stars (4 -> 8) */
     background-image: 
         radial-gradient(2px 2px at 10% 20%, white, rgba(255,255,255,0)),
         radial-gradient(2px 2px at 30% 60%, white, rgba(255,255,255,0)),
         radial-gradient(2px 2px at 70% 40%, white, rgba(255,255,255,0)),
         radial-gradient(1px 1px at 90% 80%, white, rgba(255,255,255,0)),
-        /* New stars below */
         radial-gradient(2px 2px at 5% 55%, white, rgba(255,255,255,0)),
         radial-gradient(2px 2px at 80% 15%, white, rgba(255,255,255,0)),
         radial-gradient(2px 2px at 45% 90%, white, rgba(255,255,255,0)),
+        radial-gradient(2px 2px at 60% 25%, white, rgba(255,255,255,0)),
+        radial-gradient(2px 2px at 25% 35%, white, rgba(255,255,255,0)),
+        radial-gradient(2px 2px at 50% 70%, white, rgba(255,255,255,0)),
+        radial-gradient(2px 2px at 15% 85%, white, rgba(255,255,255,0)),
+        radial-gradient(2px 2px at 35% 5%, white, rgba(255,255,255,0)),
+        radial-gradient(2px 2px at 95% 50%, white, rgba(255,255,255,0)),
+        radial-gradient(2px 2px at 40% 30%, white, rgba(255,255,255,0)),
         radial-gradient(1px 1px at 25% 5%, white, rgba(255,255,255,0));
 }
 /* --- End Starfield --- */
@@ -155,7 +160,6 @@ html[data-bs-theme="dark"] .sticky-nav {
     background-color: rgba(33, 37, 41, 0.7); 
 }
 
-/* Toggle Icon Visibility */
 #theme-icon-sun { display: none; }
 #theme-icon-moon { display: inline-block; }
 
@@ -165,5 +169,61 @@ html[data-bs-theme="dark"] #theme-icon-moon { display: none; }
 /* --- Footer Style: Unified Color for Both Modes --- */
 footer {
     /* Set color to medium grey for good visibility on both light and dark card backgrounds */
-    color: #6c757d; 
+    color: #6c757d !important; 
+}
+
+/* FUN FACTS TABS */
+
+.underline-tabs .nav-link {
+    border: none;
+    border-bottom: 2px solid transparent;
+    padding: 0.5rem 0.5rem;
+    font-weight: 500;
+    color: #6c757d;
+    transition: all 0.3s ease;
+}
+
+.underline-tabs .nav-link:hover {
+    border-bottom-color: #0d6efd50;
+    color: #0d6efd;
+}
+
+.underline-tabs .nav-link.active {
+    border-bottom-color: #0d6efd;
+    color: #0d6efd;
+}
+
+/* Content Animation */
+.tab-pane.fade {
+    transition: all 0.2s ease-out;
+}
+
+.tab-pane.fade.show {
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.text-highlight-subtle {
+    text-shadow: 1px 1px 2px rgba(108, 117, 125, 0.4); 
+}
+
+.img-grayscale {
+    filter: grayscale(100%);
+}
+
+.blockquote-primary-stripe {
+    border-left: 6px solid var(--bs-primary);
+    padding-left: 1.25rem;
+    margin-left: 0;
 }
